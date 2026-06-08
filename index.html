@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garik Mezhlumyan | Web Developer Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM2MzY2ZjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzM4YmRmOCIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjMwIiBmaWxsPSIjMGIwZjE5IiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iMjQiIC8+CiAgPHBhdGggZD0iTSAxNzAgMzQwIEwgODYgMjU2IEwgMTcwIDE3MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2cpIiBzdHJva2Utd2lkdGg9IjQwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNIDM0MiAxNzIgTCA0MjYgMjU2IEwgMzQyIDM0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2cpIiBzdHJva2Utd2lkdGg9IjQwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNIDI5MCAxMzAgTCAyMjIgMzgyIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iMzYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <a href="tel:+37496787855" class="floating-call-btn" title="Զանգահարել հիմա">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                mezhlumyan.webdev
+            </a>
+            <div class="nav-links">
+                <a href="#about">Իմ մասին</a>
+                <a href="#services">Ծառայություններ</a>
+                <a href="#projects">Պրոյեկտներ</a>
+                <a href="#contact">Կապ</a>
+            </div>
+            <a href="tel:+37496787855" class="nav-call-btn">Հարցնել գինը</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Հասանելի է պատվերների համար</span>
+            <h1>Պրոֆեսիոնալ Կայքերի <br><span class="gradient-text">Պատրաստում Գորիսում</span></h1>
+            <h2>Garik Mezhlumyan | Web Developer</h2>
+            <p>Օգնում եմ տեղական բիզնեսներին, հյուրատներին և խանութներին ունենալ արագ, ժամանակակից և հեռախոսների համար 100% ադապտացված կայքեր:</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn primary-btn">Պատվիրել Կայք</a>
+                <a href="#projects" class="btn secondary-btn">Տեսնել Աշխատանքները</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section dark-bg">
+        <span class="sub-title">Ով եմ ես</span>
+        <h2>Կայքեր, որոնք բերում են հաճախորդներ</h2>
+        <p class="about-text">
+            Ես մասնագիտացած եմ բիզնես կայքերի, օնլայն խանութների և հյուրատների համար ամրագրման համակարգերի ստեղծման մեջ: Իմ նպատակն է ստեղծել ոչ միայն սիրուն դիզայն, այլև տեխնիկապես մաքուր, արագ աշխատող և SEO-օպտիմալացված կոդ, որը կօգնի ձեր բիզնեսին աճել ինտերնետում:
+        </p>
+    </section>
+
+    <section id="services" class="section">
+        <span class="sub-title">Ինչ եմ առաջարկում</span>
+        <h2>Ծառայությունների Փաթեթներ</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+                <h3>Հյուրատների Կայքեր</h3>
+                <p>Ուղիղ ամրագրման համակարգեր (Direct Booking), որոնք թույլ են տալիս զբոսաշրջիկներին ամրագրել սենյակները հենց ձեր կայքից՝ առանց Booking.com-ին միջնորդավճար տալու:</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <h3>E-Commerce (Օնլայն Խանութներ)</h3>
+                <p>Ապրանքների կատալոգներ, զամբյուղ, օնլայն վճարումների միացում և պատվերների ավտոմատ ստացում ձեր հեռախոսին:</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Բիզնես Վիզիտկա Կայքեր</h3>
+                <p>Ձեր ծառայությունների ներկայացում, պորտֆոլիո, գնացուցակ և հետադարձ կապի ակտիվ կոճակներ տեղական ընկերությունների համար:</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section dark-bg">
+        <span class="sub-title">Իմ աշխատանքները</span>
+        <h2>Վերջին Պրոյեկտները</h2>
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div>
+                    <div class="project-header">
+                        <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
+                        <div class="card-links">
+                            <a href="{{ project.github_url }}" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="{{ project.live_url }}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                </div>
+                <div>
+                    <div class="project-tags">
+                        {% for tag in project.tags %}
+                        <span>{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <span class="sub-title">Տեխնոլոգիաներ</span>
+        <h2>Իմ Մասնագիտական Գործիքները</h2>
+        <div class="skills-container">
+            {% for skill in skills %}
+            <div class="skill-badge">
+                <i class="fa-solid fa-code"></i> {{ skill }}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="contact" class="section dark-bg">
+        <span class="sub-title">Կապ հաստատել</span>
+        <h2>Քննարկենք Ձեր Պրոյեկտը</h2>
+        <p>Ունե՞ք հարցեր կամ ցանկանում եք իմանալ ձեր ապագա կայքի արժեքը: Կապվեք ինձ հետ ձեզ հարմար տարբերակով:</p>
+        
+        <div class="contact-wrapper">
+            <a href="tel:+37496787855" class="contact-box">
+                <i class="fa-solid fa-phone"></i>
+                <span>Զանգահարել</span>
+                <p>+374 (96) 78-78-55</p>
+            </a>
+            <a href="mailto:mezhlumyangarik@gmail.com" class="contact-box" style="border-color: rgba(99, 102, 241, 0.2);">
+                <i class="fa-regular fa-envelope" style="color: #6366f1;"></i>
+                <span>Էլ. Փոստ</span>
+                <p>mezhlumyangarik@gmail.com</p>
+            </a>
+        </div>
+
+       <div class="social-links">
+    <a href="https://instagram.com/mezhlumyan.webdev" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://github.com/mezhlumyangarik-hue" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+</div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 25px;">
+            <a href="#about" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Իմ մասին</a>
+            <a href="#services" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Ծառայություններ</a>
+            <a href="#projects" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Պրոյեկտներ</a>
+            <a href="#contact" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Կապ</a>
+        </div>
+        <p>&copy; 2026 mezhlumyan.webdev. Բոլոր իրավունքները պաշտպանված են:</p>
+    </footer>
+
+</body>
+</html>
