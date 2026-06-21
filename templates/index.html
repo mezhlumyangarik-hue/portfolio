@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garik Mezhlumyan | Web Developer Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM2MzY2ZjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzM4YmRmOCIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjMwIiBmaWxsPSIjMGIwZjE5IiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iMjQiIC8+CiAgPHBhdGggZD0iTSAxNzAgMzQwIEwgODYgMjU2IEwgMTcwIDE3MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2cpIiBzdHJva2Utd2lkdGg9IjQwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNIDM0MiAxNzIgTCA0MjYgMjU2IEwgMzQyIDM0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2cpIiBzdHJva2Utd2lkdGg9IjQwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNIDI5MCAxMzAgTCAyMjIgMzgyIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iMzYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM2MzY2ZjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzM4YmRmOCIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAg </defs>
+  <circle cx="256" cy="256" r="230" fill="#0b0f19" stroke="url(#g)" stroke-width="24" />
+  <path d="M 170 340 L 86 256 L 170 172" fill="none" stroke="url(#g)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 342 172 L 426 256 L 342 340" fill="none" stroke="url(#g)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 290 130 L 222 382" fill="none" stroke="url(#g)" stroke-width="36" stroke-linecap="round"/>
+</svg>">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -103,6 +108,29 @@
                 </div>
             </div>
             {% endfor %}
+
+            <div class="project-card">
+                <div>
+                    <div class="project-header">
+                        <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
+                        <div class="card-links">
+                            <a href="https://github.com/mezhlumyangarik-hue/royal-ararati-demo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://royal-ararati-demo.onrender.com" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>Royal Ararati Restaurant (Demo)</h3>
+                    <p>Ռեստորանային համալիրի ժամանակակից դեմո կայք՝ պատրաստված Flask-ով։ Ներառում է էլեգանտ գլխավոր էջ, թվային մենյուի բաժին և սեղանների օնլայն ամրագրման հարմար համակարգ։</p>
+                </div>
+                <div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>HTML/CSS</span>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -122,7 +150,7 @@
         <span class="sub-title">Կապ հաստատել</span>
         <h2>Քննարկենք Ձեր Պրոյեկտը</h2>
         <p>Ունե՞ք հարցեր կամ ցանկանում եք իմանալ ձեր ապագա կայքի արժեքը: Կապվեք ինձ հետ ձեզ հարմար տարբերակով:</p>
-        
+         
         <div class="contact-wrapper">
             <a href="tel:+37496787855" class="contact-box">
                 <i class="fa-solid fa-phone"></i>
