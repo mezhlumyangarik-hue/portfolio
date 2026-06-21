@@ -281,11 +281,14 @@ nav {
     font-size: 1.3rem;
 }
 
-/* Projects Cards Grid */
+/* Projects Cards Grid (Flexbox տարբերակ՝ կենտ քարտը մեջտեղում պահելու համար) */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -299,6 +302,9 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     animation: fadeInUp 1.2s ease-in-out;
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 320px;
+    max-width: 380px;
 }
 
 .project-card:hover {
@@ -343,6 +349,7 @@ nav {
 .project-tags {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .project-tags span {
@@ -515,7 +522,15 @@ footer {
         text-align: justify;
     }
 
-    .services-grid, .projects-grid {
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 0;
@@ -523,6 +538,8 @@ footer {
 
     .service-card, .project-card {
         padding: 25px 20px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .contact-wrapper {
