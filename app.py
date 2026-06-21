@@ -28,6 +28,13 @@ def home():
             'github_url': 'https://github.com/mezhlumyangarik-hue/KARS-Legacy'
         }
     ]
+    {
+        'title': ' Restaurant (Demo)',
+        'description': 'Ռեստորանային համալիրի ժամանակակից դեմո կայք՝ պատրաստված Flask-ով։ Ներառում է էլեգանտ գլխավոր էջ, թվային մենյուի (Digital Menu) բաժին և սեղանների օնլայն ամրագրման հարմար համակարգ։',
+        'github_url': 'https://github.com/mezhlumyangarik-hue/royal-ararati-demo', # Փոխիր քո իրական GitHub հղումով
+        'live_url': 'https://restaurant-demo-tb6k.onrender.com/', # Փոխիր քո իրական Render հղումով
+        'tags': ['Python', 'Flask', 'HTML/CSS', 'Responsive Design']
+    }
     
     # Քո հմտությունների ցուցակը
     skills = ['HTML5', 'CSS3 / Grid / Flexbox', 'JavaScript (ES6+)', 'Python / Flask', 'Git / GitHub', 'Responsive Web Design']
