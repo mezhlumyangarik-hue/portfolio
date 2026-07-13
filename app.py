@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # Քո իրական պրոյեկտների տվյալները
+    # 4 յուրահատուկ պրոյեկտներ՝ առանց կրկնությունների
     projects = [
         {
             'title': 'TechPulse Store',
@@ -41,6 +41,5 @@ def home():
     
     return render_template('index.html', projects=projects, skills=skills)
 
-# Vercel-ի համար սա հերիք է, այստեղ ոչ մի ավելորդ բան պետք չէ կանչել
 if __name__ == '__main__':
     app.run(debug=True)
