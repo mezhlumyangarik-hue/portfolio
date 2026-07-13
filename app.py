@@ -5,21 +5,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Ֆունկցիա, որը հետնապլանում (Background) 5 րոպեն մեկ կանչելու է այս կայքը
-def self_ping():
-    # Սպասում ենք 10 վայրկյան, մինչև սերվերը Render-ում լրիվ միանա
-    time.sleep(10)
-    while True:
-        try:
-            # Փոխիր սա հենց ՔՈ ԱՅՍ պորտֆոլիո կայքի իրական Render հղումով
-            url = "https://garik-portfolio.onrender.com" 
-            response = requests.get(url)
-            print(f"--- Self-ping status: {response.status_code} ---")
-        except Exception as e:
-            print(f"--- Self-ping failed: {e} ---")
-        
-        # Սպասել 5 րոպե (300 վայրկյան)
-        time.sleep(300)
+# Ֆունկցիա, որը հետնապլանում (Bac
 
 @app.route('/')
 def home():
