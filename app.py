@@ -10,14 +10,14 @@ def home():
             'title': 'TechPulse Store',
             'description': 'Ժամանակակից էլեկտրոնային առևտրի հարթակ (E-commerce)՝ մաքուր, արագ և հարմարավետ ապրանքների կատալոգով:',
             'tags': ['Flask', 'HTML5/CSS3', 'JavaScript', 'Responsive'],
-            'live_url': 'https://techpulse-store-333.onrender.com',
+            'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue/techpulse-store'
         },
         {
             'title': 'Hotel Demo',
             'description': 'Ադապտիվ և սիրուն կայք՝ հատուկ տեղական հյուրատների (Guest Houses) և հյուրանոցների ամրագրումների համար:',
             'tags': ['Python', 'Flask', 'UI/UX Design', 'CSS Grid'],
-            'live_url': 'https://hotel-demo-wstg.onrender.com',
+            'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue/hotel_demo'
         },
         {
@@ -31,7 +31,7 @@ def home():
             'title': 'Restaurant (Demo)',
             'description': 'Ռեստորանային համալիրի ժամանակակից դեմո կայք՝ պատրաստված Flask-ով։ Ներառում է էլեգանտ գլխավոր էջ, թվային մենյուի (Digital Menu) բաժին և սեղանների օնլայն ամրագրման հարմար համակարգ։',
             'github_url': 'https://github.com/mezhlumyangarik-hue/royal-ararati-demo', 
-            'live_url': 'https://restaurant-demo-tb6k.onrender.com/', 
+            'live_url': 'https://restaurant-demo-m.vercel.app/', 
             'tags': ['Python', 'Flask', 'HTML/CSS', 'Responsive Design']
         }
     ]
