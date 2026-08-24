@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="hy">
+<html lang="{{ current_lang }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garik Mezhlumyan | Web Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Garik Mezhlumyan | Web Developer Portfolio 2026</title>
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234f46e5' /><stop offset='100%' style='stop-color:%237c3aed' /></linearGradient></defs><circle cx='256' cy='256' r='230' fill='%230b0f19' stroke='url(%23g)' stroke-width='24' /><path d='M190 320 L126 256 L190 192 M322 192 L386 256 L322 320 M280 150 L232 362' fill='none' stroke='%23ffffff' stroke-width='36' stroke-linecap='round' stroke-linejoin='round'/></svg>">
     
@@ -13,75 +13,82 @@
 </head>
 <body>
 
-    <a href="tel:+37496787855" class="floating-call-btn" title="Զանգահարել հիմա">
+    <a href="tel:+37496787855" class="floating-call-btn" title="Call">
         <i class="fa-solid fa-phone"></i>
     </a>
 
     <header>
         <nav>
-            <a href="#" class="logo">
+            <a href="?lang={{ current_lang }}" class="logo">
                 <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="16 18 22 12 16 6"></polyline>
                     <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
-                mezhlumyan.webdev
+                mezhlumyan.dev
             </a>
+
             <div class="nav-links">
-                <a href="#about">Իմ մասին</a>
-                <a href="#services">Ծառայություններ</a>
-                <a href="#projects">Պրոյեկտներ</a>
-                <a href="#contact">Կապ</a>
+                <a href="#about">{{ t.nav_about }}</a>
+                <a href="#services">{{ t.nav_services }}</a>
+                <a href="#projects">{{ t.nav_projects }}</a>
+                <a href="#contact">{{ t.nav_contact }}</a>
             </div>
-            <a href="tel:+37496787855" class="nav-call-btn">Հարցնել գինը</a>
+
+            <div class="nav-right">
+                <div class="lang-switch">
+                    <a href="?lang=hy" class="{% if current_lang == 'hy' %}active{% endif %}">AM</a>
+                    <a href="?lang=ru" class="{% if current_lang == 'ru' %}active{% endif %}">RU</a>
+                    <a href="?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">EN</a>
+                </div>
+                <a href="tel:+37496787855" class="nav-call-btn">{{ t.nav_cta }}</a>
+            </div>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">Հասանելի է պատվերների համար</span>
-            <h1>Պրոֆեսիոնալ Կայքերի <br><span class="gradient-text">Պատրաստում Գորիսում</span></h1>
+            <span class="badge">{{ t.hero_badge }}</span>
+            <h1>{{ t.hero_title_1 }} <br><span class="gradient-text">{{ t.hero_title_2 }}</span></h1>
             <h2>Garik Mezhlumyan | Web Developer</h2>
-            <p>Օգնում եմ տեղական բիզնեսներին, հյուրատներին և խանութներին ունենալ արագ, ժամանակակից և հեռախոսների համար 100% ադապտացված կայքեր:</p>
+            <p>{{ t.hero_desc }}</p>
             <div class="hero-btns">
-                <a href="#contact" class="btn primary-btn">Պատվիրել Կայք</a>
-                <a href="#projects" class="btn secondary-btn">Տեսնել Աշխատանքները</a>
+                <a href="#contact" class="btn primary-btn">{{ t.hero_btn_primary }}</a>
+                <a href="#projects" class="btn secondary-btn">{{ t.hero_btn_secondary }}</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="section dark-bg">
-        <span class="sub-title">Ով եմ ես</span>
-        <h2>Կայքեր, որոնք բերում են հաճախորդներ</h2>
-        <p class="about-text">
-            Ես մասնագիտացած եմ բիզնես կայքերի, օնլայն խանութների և հյուրատների համար ամրագրման համակարգերի ստեղծման մեջ: Իմ նպատակն է ստեղծել ոչ միայն սիրուն դիզայն, այլև տեխնիկապես մաքուր, արագ աշխատող և SEO-օպտիմալացված կոդ, որը կօգնի ձեր բիզնեսին աճել ինտերնետում:
-        </p>
+        <span class="sub-title">{{ t.about_sub }}</span>
+        <h2>{{ t.about_title }}</h2>
+        <p class="about-text">{{ t.about_text }}</p>
     </section>
 
     <section id="services" class="section">
-        <span class="sub-title">Ինչ եմ առաջարկում</span>
-        <h2>Ծառայությունների Փաթեթներ</h2>
+        <span class="sub-title">{{ t.services_sub }}</span>
+        <h2>{{ t.services_title }}</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
-                <h3>Հյուրատների Կայքեր</h3>
-                <p>Ուղիղ ամրագրման համակարգեր (Direct Booking), որոնք թույլ են տալիս զբոսաշրջիկներին ամրագրել սենյակները հենց ձեր կայքից՝ առանց Booking.com-ին միջնորդավճար տալու:</p>
+                <h3>{{ t.srv1_title }}</h3>
+                <p>{{ t.srv1_desc }}</p>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                <h3>E-Commerce (Օնլայն Խանութներ)</h3>
-                <p>Ապրանքների կատալոգներ, զամբյուղ, օնլայն վճարումների միացում և պատվերների ավտոմատ ստացում ձեր հեռախոսին:</p>
+                <h3>{{ t.srv2_title }}</h3>
+                <p>{{ t.srv2_desc }}</p>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3>Բիզնես Վիզիտկա Կայքեր</h3>
-                <p>Ձեր ծառայությունների ներկայացում, պորտֆոլիո, գնացուցակ և հետադարձ կապի ակտիվ կոճակներ տեղական ընկերությունների համար:</p>
+                <h3>{{ t.srv3_title }}</h3>
+                <p>{{ t.srv3_desc }}</p>
             </div>
         </div>
     </section>
 
     <section id="projects" class="section dark-bg">
-        <span class="sub-title">Իմ աշխատանքները</span>
-        <h2>Վերջին Պրոյեկտները</h2>
+        <span class="sub-title">{{ t.projects_sub }}</span>
+        <h2>{{ t.projects_title }}</h2>
         <div class="projects-grid">
             {% for project in projects %}
             <div class="project-card">
@@ -89,8 +96,8 @@
                     <div class="project-header">
                         <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
                         <div class="card-links">
-                            <a href="{{ project.github_url }}" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="{{ project.live_url }}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="{{ project.github_url }}" target="_blank" title="GitHub Source Code"><i class="fa-brands fa-github"></i></a>
+                            <a href="{{ project.live_url }}" target="_blank" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                     <h3>{{ project.title }}</h3>
@@ -109,8 +116,8 @@
     </section>
 
     <section class="section">
-        <span class="sub-title">Տեխնոլոգիաներ</span>
-        <h2>Իմ Մասնագիտական Գործիքները</h2>
+        <span class="sub-title">{{ t.skills_sub }}</span>
+        <h2>{{ t.skills_title }}</h2>
         <div class="skills-container">
             {% for skill in skills %}
             <div class="skill-badge">
@@ -121,19 +128,19 @@
     </section>
 
     <section id="contact" class="section dark-bg">
-        <span class="sub-title">Կապ հաստատել</span>
-        <h2>Քննարկենք Ձեր Պրոյեկտը</h2>
-        <p>Ունե՞ք հարցեր կամ ցանկանում եք իմանալ ձեր ապագա կայքի արժեքը: Կապվեք ինձ հետ ձեզ հարմար տարբերակով:</p>
+        <span class="sub-title">{{ t.contact_sub }}</span>
+        <h2>{{ t.contact_title }}</h2>
+        <p>{{ t.contact_desc }}</p>
          
         <div class="contact-wrapper">
             <a href="tel:+37496787855" class="contact-box">
                 <i class="fa-solid fa-phone"></i>
-                <span>Զանգահարել</span>
+                <span>{{ t.call_now }}</span>
                 <p>+374 (96) 78-78-55</p>
             </a>
             <a href="mailto:mezhlumyangarik@gmail.com" class="contact-box" style="border-color: rgba(99, 102, 241, 0.2);">
                 <i class="fa-regular fa-envelope" style="color: #6366f1;"></i>
-                <span>Էլ. Փոստ</span>
+                <span>{{ t.email_us }}</span>
                 <p>mezhlumyangarik@gmail.com</p>
             </a>
         </div>
@@ -145,13 +152,13 @@
     </section>
 
     <footer>
-        <div style="margin-bottom: 25px;">
-            <a href="#about" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Իմ մասին</a>
-            <a href="#services" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Ծառայություններ</a>
-            <a href="#projects" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Պրոյեկտներ</a>
-            <a href="#contact" style="color: #64748b; margin: 0 12px; text-decoration: none; font-weight: 500;">Կապ</a>
+        <div class="footer-links">
+            <a href="#about">{{ t.nav_about }}</a>
+            <a href="#services">{{ t.nav_services }}</a>
+            <a href="#projects">{{ t.nav_projects }}</a>
+            <a href="#contact">{{ t.nav_contact }}</a>
         </div>
-        <p>&copy; 2026 mezhlumyan.webdev. Բոլոր իրավունքները պաշտպանված են:</p>
+        <p>&copy; 2026 mezhlumyan.dev. {{ t.footer_rights }}</p>
     </footer>
 
 </body>
