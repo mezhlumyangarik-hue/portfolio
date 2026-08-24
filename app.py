@@ -113,7 +113,7 @@ PROJECTS_DATA = {
             'title': 'Imperial Gold',
             'description': 'Շքեղ ոսկերչական սրահի էլեկտրոնային կատալոգ, ապրանքների ցուցադրություն և պատվերների համակարգ:',
             'tags': ['HTML5/CSS3', 'JavaScript', 'Responsive', 'UI/UX'],
-            'live_url': 'https://imperialgold.vercel.app',
+            'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue'
         },
         {
