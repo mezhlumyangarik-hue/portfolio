@@ -93,7 +93,9 @@
                         <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
                         <div class="card-links">
                             <a href="{{ project.github_url }}" target="_blank" title="GitHub Code"><i class="fa-brands fa-github"></i></a>
-                            <a href="{{ project.live_url }}" target="_blank" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="{{ project.live_url }}" target="_blank" rel="noopener noreferrer" title="Live Preview">
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
                         </div>
                     </div>
                     <h3>{{ project.title }}</h3>
