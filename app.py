@@ -38,7 +38,7 @@ TRANSLATIONS = {
         'footer_rights': 'Բոլոր իրավունքները պաշտպանված են:'
     },
     'ru': {
-        'nav_about': 'Обо мне',
+        'nav_about': 'О мне',
         'nav_services': 'Услуги',
         'nav_projects': 'Портфолио',
         'nav_contact': 'Контакты',
@@ -150,8 +150,8 @@ PROJECTS_DATA = {
             'title': 'Imperial Gold',
             'description': 'Электронный каталог ювелирного салона с презентацией товаров и системой заказов.',
             'tags': ['HTML5/CSS3', 'JavaScript', 'Responsive', 'UI/UX'],
-            'live_url': 'https://imperialgold.vercel.app',
-            'github_url': 'https://github.com/mezhlumyangarik-hue'
+            'live_url': 'https://imperial-gold-livid.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue/Imperial-Gold'
         },
         {
             'title': 'TechPulse Store',
@@ -187,8 +187,8 @@ PROJECTS_DATA = {
             'title': 'Imperial Gold',
             'description': 'Luxury jewelry store e-catalog with sleek product showcases and interactive order flows.',
             'tags': ['HTML5/CSS3', 'JavaScript', 'Responsive', 'UI/UX'],
-            'live_url': 'https://imperialgold.vercel.app',
-            'github_url': 'https://github.com/mezhlumyangarik-hue'
+            'live_url': 'https://imperial-gold-livid.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue/Imperial-Gold'
         },
         {
             'title': 'TechPulse Store',
