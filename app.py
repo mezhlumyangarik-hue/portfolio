@@ -37,6 +37,7 @@ TRANSLATIONS = {
         'email_us': 'Էլ. Փոստ',
         'footer_rights': 'Բոլոր իրավունքները պաշտպանված են:'
     },
+
     'ru': {
         'nav_about': 'О мне',
         'nav_services': 'Услуги',
@@ -71,6 +72,7 @@ TRANSLATIONS = {
         'email_us': 'Эл. почта',
         'footer_rights': 'Все права защищены.'
     },
+
     'en': {
         'nav_about': 'About',
         'nav_services': 'Services',
@@ -107,7 +109,9 @@ TRANSLATIONS = {
     }
 }
 
+
 PROJECTS_DATA = {
+
     'hy': [
         {
             'title': 'Imperial Gold',
@@ -143,8 +147,16 @@ PROJECTS_DATA = {
             'tags': ['Python', 'Flask', 'HTML/CSS', 'Responsive'],
             'live_url': 'https://restaurant-demo-m.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue/royal-ararati-demo'
+        },
+        {
+            'title': 'Tevosyan Furniture',
+            'description': 'Ժամանակակից կահույքի E-Commerce կայք՝ կատալոգով, կատեգորիաներով, զամբյուղով և օնլայն պատվերի համակարգով:',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
+            'live_url': 'https://tevosyan-furniture.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue'
         }
     ],
+
     'ru': [
         {
             'title': 'Imperial Gold',
@@ -180,8 +192,16 @@ PROJECTS_DATA = {
             'tags': ['Python', 'Flask', 'HTML/CSS', 'Responsive'],
             'live_url': 'https://restaurant-demo-m.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue/royal-ararati-demo'
+        },
+        {
+            'title': 'Tevosyan Furniture',
+            'description': 'Современный E-Commerce сайт мебели с каталогом, категориями, корзиной и системой онлайн-заказа.',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
+            'live_url': 'https://tevosyan-furniture.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue'
         }
     ],
+
     'en': [
         {
             'title': 'Imperial Gold',
@@ -217,21 +237,46 @@ PROJECTS_DATA = {
             'tags': ['Python', 'Flask', 'HTML/CSS', 'Responsive'],
             'live_url': 'https://restaurant-demo-m.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue/royal-ararati-demo'
+        },
+        {
+            'title': 'Tevosyan Furniture',
+            'description': 'Modern furniture E-Commerce website with product catalog, categories, shopping cart and online ordering system.',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
+            'live_url': 'https://tevosyan-furniture.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue'
         }
     ]
 }
 
+
 @app.route('/')
 def home():
     lang = request.args.get('lang', 'hy')
+
     if lang not in TRANSLATIONS:
         lang = 'hy'
-        
+
     t = TRANSLATIONS[lang]
     projects = PROJECTS_DATA[lang]
-    skills = ['HTML5 / CSS3', 'JavaScript (ES6+)', 'Python / Flask', 'Git / GitHub', 'Responsive Web Design', 'UI/UX Design', 'SEO Fundamentals']
-    
-    return render_template('index.html', t=t, projects=projects, skills=skills, current_lang=lang)
+
+    skills = [
+        'HTML5 / CSS3',
+        'JavaScript (ES6+)',
+        'Python / Flask',
+        'Git / GitHub',
+        'Responsive Web Design',
+        'UI/UX Design',
+        'SEO Fundamentals'
+    ]
+
+    return render_template(
+        'index.html',
+        t=t,
+        projects=projects,
+        skills=skills,
+        current_lang=lang
+    )
+
 
 if __name__ == '__main__':
     app.run(debug=True)
