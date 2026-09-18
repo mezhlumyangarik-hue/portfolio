@@ -3,155 +3,1048 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garik Mezhlumyan | Web Developer 2026</title>
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><circle cx='256' cy='256' r='230' fill='%230b0f19' stroke='%236366f1' stroke-width='24'/><path d='M190 320 L126 256 L190 192 M322 192 L386 256 L322 320 M280 150 L232 362' fill='none' stroke='%2338bdf8' stroke-width='36' stroke-linecap='round' stroke-linejoin='round'/></svg>">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Garik Mezhlumyan | Web Developer</title>
+
+    <meta name="description"
+          content="Garik Mezhlumyan — Web Developer creating modern, fast and interactive websites.">
+
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+          <circle cx='256' cy='256' r='230' fill='%23060910' stroke='%236366f1' stroke-width='24'/>
+          <path d='M190 320 L126 256 L190 192 M322 192 L386 256 L322 320 M280 150 L232 362'
+          fill='none' stroke='%2338bdf8' stroke-width='36'
+          stroke-linecap='round' stroke-linejoin='round'/>
+          </svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <a href="tel:+37496787855" class="floating-call-btn" title="Call">
-        <i class="fa-solid fa-phone"></i>
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="noise"></div>
+
+<div class="background-orb orb-1"></div>
+<div class="background-orb orb-2"></div>
+<div class="background-orb orb-3"></div>
+
+<div class="grid-background"></div>
+
+
+<!-- =========================================================
+     CUSTOM CURSOR
+========================================================= -->
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header" id="siteHeader">
+
+    <nav class="navbar">
+
+        <a href="?lang={{ current_lang }}" class="logo">
+
+            <span class="logo-symbol">&lt;/&gt;</span>
+
+            <span>
+                mezhlumyan<span class="logo-dot">.</span>dev
+            </span>
+
+        </a>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#about" class="nav-link">
+                {{ t.nav_about }}
+            </a>
+
+            <a href="#services" class="nav-link">
+                {{ t.nav_services }}
+            </a>
+
+            <a href="#projects" class="nav-link">
+                {{ t.nav_projects }}
+            </a>
+
+            <a href="#contact" class="nav-link">
+                {{ t.nav_contact }}
+            </a>
+
+        </div>
+
+
+        <div class="nav-actions">
+
+            <div class="lang-switch">
+
+                <a href="?lang=hy"
+                   class="{% if current_lang == 'hy' %}active{% endif %}">
+                    AM
+                </a>
+
+                <a href="?lang=ru"
+                   class="{% if current_lang == 'ru' %}active{% endif %}">
+                    RU
+                </a>
+
+                <a href="?lang=en"
+                   class="{% if current_lang == 'en' %}active{% endif %}">
+                    EN
+                </a>
+
+            </div>
+
+
+            <a href="tel:+37496787855"
+               class="header-cta">
+
+                {{ t.nav_cta }}
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-content reveal">
+
+            <div class="availability">
+
+                <span class="availability-dot"></span>
+
+                <span>{{ t.hero_badge }}</span>
+
+            </div>
+
+
+            <div class="hero-small-title">
+
+                WEB DEVELOPER
+
+                <span></span>
+
+                2026
+
+            </div>
+
+
+            <h1>
+
+                <span class="hero-line">
+                    {{ t.hero_title_1 }}
+                </span>
+
+                <span class="hero-gradient">
+                    {{ t.hero_title_2 }}
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                {{ t.hero_desc }}
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="main-btn">
+
+                    <span>{{ t.hero_btn_secondary }}</span>
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </a>
+
+
+                <a href="#contact"
+                   class="outline-btn">
+
+                    <span>{{ t.hero_btn_primary }}</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div class="stat">
+
+                    <strong>05+</strong>
+
+                    <span>Projects</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <strong>03</strong>
+
+                    <span>Languages</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <strong>100%</strong>
+
+                    <span>Responsive</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT VISUAL -->
+
+        <div class="hero-visual reveal-right">
+
+
+            <div class="visual-glow"></div>
+
+
+            <!-- Orbit -->
+
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+
+
+            <!-- Laptop -->
+
+            <div class="laptop">
+
+                <div class="laptop-screen">
+
+                    <div class="screen-top">
+
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="screen-url">
+                            mezhlumyan.dev
+                        </div>
+
+                    </div>
+
+
+                    <div class="code-area">
+
+                        <div class="code-sidebar">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+
+                        <div class="code-content">
+
+                            <span class="code-comment">
+                                &lt;!-- digital experience --&gt;
+                            </span>
+
+                            <span>
+                                <b>&lt;section</b>
+                                class="hero"
+                                <b>&gt;</b>
+                            </span>
+
+                            <span class="indent">
+                                <b>&lt;h1&gt;</b>
+                                Build Something
+                                <b>&lt;/h1&gt;</b>
+                            </span>
+
+                            <span class="indent">
+                                <b>&lt;p&gt;</b>
+                                Modern Web Experience
+                                <b>&lt;/p&gt;</b>
+                            </span>
+
+                            <span class="indent">
+                                <b>&lt;button&gt;</b>
+                                Explore
+                                <b>&lt;/button&gt;</b>
+                            </span>
+
+                            <span>
+                                <b>&lt;/section&gt;</b>
+                            </span>
+
+                            <div class="code-line"></div>
+                            <div class="code-line short"></div>
+                            <div class="code-line medium"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="preview-window">
+
+                        <div class="preview-title">
+                            Better Digital Experiences
+                        </div>
+
+                        <div class="preview-text">
+                            Modern websites.
+                            Clean code.
+                            Real results.
+                        </div>
+
+                        <div class="preview-button">
+                            Explore
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="laptop-base">
+
+                    <div class="laptop-keyboard"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Floating Technology Cards -->
+
+            <div class="tech-card tech-html">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <span>HTML5</span>
+
+            </div>
+
+
+            <div class="tech-card tech-css">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <span>CSS3</span>
+
+            </div>
+
+
+            <div class="tech-card tech-js">
+
+                <i class="fa-brands fa-js"></i>
+
+                <span>JavaScript</span>
+
+            </div>
+
+
+            <div class="tech-card tech-python">
+
+                <i class="fa-brands fa-python"></i>
+
+                <span>Python</span>
+
+            </div>
+
+
+            <div class="tech-card tech-react">
+
+                <i class="fa-brands fa-react"></i>
+
+                <span>React</span>
+
+            </div>
+
+
+            <div class="floating-code">
+                &lt;/&gt;
+            </div>
+
+            <div class="floating-bracket">
+                { }
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCROLL -->
+
+    <a href="#about" class="scroll-indicator">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <i class="fa-solid fa-arrow-down"></i>
+
     </a>
 
-    <header>
-        <nav>
-            <a href="?lang={{ current_lang }}" class="logo">
-                <span class="logo-accent">&lt;/&gt;</span> mezhlumyan.dev
-            </a>
+</section>
 
-            <div class="nav-links">
-                <a href="#about">{{ t.nav_about }}</a>
-                <a href="#services">{{ t.nav_services }}</a>
-                <a href="#projects">{{ t.nav_projects }}</a>
-                <a href="#contact">{{ t.nav_contact }}</a>
+
+<!-- =========================================================
+     MOVING TICKER
+========================================================= -->
+
+<section class="ticker">
+
+    <div class="ticker-track">
+
+        <span>CODE</span>
+        <i>✦</i>
+
+        <span>DESIGN</span>
+        <i>✦</i>
+
+        <span>MOTION</span>
+        <i>✦</i>
+
+        <span>EXPERIENCE</span>
+        <i>✦</i>
+
+        <span>CODE</span>
+        <i>✦</i>
+
+        <span>DESIGN</span>
+        <i>✦</i>
+
+        <span>MOTION</span>
+        <i>✦</i>
+
+        <span>EXPERIENCE</span>
+        <i>✦</i>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about" class="section about-section">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            {{ t.about_sub }}
+        </span>
+
+        <h2>
+            {{ t.about_title }}
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <div class="about-main reveal-left">
+
+            <div class="about-number">
+                01
             </div>
 
-            <div class="nav-right">
-                <div class="lang-switch">
-                    <a href="?lang=hy" class="{% if current_lang == 'hy' %}active{% endif %}">🇦🇲 AM</a>
-                    <a href="?lang=ru" class="{% if current_lang == 'ru' %}active{% endif %}">🇷🇺 RU</a>
-                    <a href="?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">🇬🇧 EN</a>
-                </div>
-                <a href="tel:+37496787855" class="nav-call-btn">{{ t.nav_cta }}</a>
-            </div>
-        </nav>
-    </header>
+            <h3>
+                I build digital experiences
+                <span>that matter.</span>
+            </h3>
 
-    <section class="hero">
-        <div class="hero-content animate-fade">
-            <span class="badge glow-effect">{{ t.hero_badge }}</span>
-            <h1>{{ t.hero_title_1 }} <br><span class="gradient-text">{{ t.hero_title_2 }}</span></h1>
-            <h2>{{ t.about_title }}</h2>
-            <p>{{ t.hero_desc }}</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn primary-btn pulse-glow">{{ t.hero_btn_primary }}</a>
-                <a href="#projects" class="btn secondary-btn">{{ t.hero_btn_secondary }}</a>
+            <p>
+                {{ t.about_text }}
+            </p>
+
+
+            <div class="about-line"></div>
+
+
+            <div class="about-bottom">
+
+                <span>Based in Armenia</span>
+
+                <span>Available for projects</span>
+
             </div>
+
         </div>
-    </section>
 
-    <section id="about" class="section dark-bg animate-on-scroll">
-        <span class="sub-title">{{ t.about_sub }}</span>
-        <h2>{{ t.about_title }}</h2>
-        <p class="about-text">{{ t.about_text }}</p>
-    </section>
 
-    <section id="services" class="section animate-on-scroll">
-        <span class="sub-title">{{ t.services_sub }}</span>
-        <h2>{{ t.services_title }}</h2>
-        <div class="services-grid">
-            <div class="service-card hover-glow">
-                <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
-                <h3>{{ t.srv1_title }}</h3>
-                <p>{{ t.srv1_desc }}</p>
-            </div>
-            <div class="service-card hover-glow">
-                <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                <h3>{{ t.srv2_title }}</h3>
-                <p>{{ t.srv2_desc }}</p>
-            </div>
-            <div class="service-card hover-glow">
-                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3>{{ t.srv3_title }}</h3>
-                <p>{{ t.srv3_desc }}</p>
-            </div>
-        </div>
-    </section>
+        <div class="about-cards reveal-right">
 
-    <section id="projects" class="section dark-bg animate-on-scroll">
-        <span class="sub-title">{{ t.projects_sub }}</span>
-        <h2>{{ t.projects_title }}</h2>
-        <div class="projects-grid">
-            {% for project in projects %}
-            <div class="project-card hover-glow">
+            <div class="mini-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
                 <div>
-                    <div class="project-header">
-                        <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
-                        <div class="card-links">
-                            <a href="{{ project.github_url }}" target="_blank" title="GitHub Code"><i class="fa-brands fa-github"></i></a>
-                            <a href="{{ project.live_url }}" target="_blank" rel="noopener noreferrer" title="Live Preview">
-    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-</a>
+                    <strong>Fast</strong>
+                    <span>Performance focused</span>
+                </div>
+
+            </div>
+
+
+            <div class="mini-card">
+
+                <i class="fa-solid fa-mobile-screen"></i>
+
+                <div>
+                    <strong>Responsive</strong>
+                    <span>Every screen matters</span>
+                </div>
+
+            </div>
+
+
+            <div class="mini-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <div>
+                    <strong>Clean Code</strong>
+                    <span>Structured & scalable</span>
+                </div>
+
+            </div>
+
+
+            <div class="mini-card">
+
+                <i class="fa-solid fa-rocket"></i>
+
+                <div>
+                    <strong>Modern</strong>
+                    <span>Built for 2026</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services" class="section services-section">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            {{ t.services_sub }}
+        </span>
+
+        <h2>
+            {{ t.services_title }}
+        </h2>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <article class="service-card reveal">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <div class="service-icon">
+                <i class="fa-solid fa-hotel"></i>
+            </div>
+
+            <h3>
+                {{ t.srv1_title }}
+            </h3>
+
+            <p>
+                {{ t.srv1_desc }}
+            </p>
+
+            <div class="service-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <div class="service-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <h3>
+                {{ t.srv2_title }}
+            </h3>
+
+            <p>
+                {{ t.srv2_desc }}
+            </p>
+
+            <div class="service-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <div class="service-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <h3>
+                {{ t.srv3_title }}
+            </h3>
+
+            <p>
+                {{ t.srv3_desc }}
+            </p>
+
+            <div class="service-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects" class="section projects-section">
+
+    <div class="section-heading projects-heading reveal">
+
+        <div>
+
+            <span class="section-label">
+                {{ t.projects_sub }}
+            </span>
+
+            <h2>
+                {{ t.projects_title }}
+            </h2>
+
+        </div>
+
+        <div class="projects-counter">
+            05 / WORKS
+        </div>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+        {% for project in projects %}
+
+        <article class="project-card reveal">
+
+            <div class="project-visual">
+
+                <div class="project-browser">
+
+                    <div class="browser-top">
+
+                        <div class="browser-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                    </div>
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
-                </div>
-                <div>
-                    <div class="project-tags">
-                        {% for tag in project.tags %}
-                        <span>{{ tag }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
 
-    <section class="section animate-on-scroll">
-        <span class="sub-title">{{ t.skills_sub }}</span>
-        <h2>{{ t.skills_title }}</h2>
-        <div class="skills-container">
-            {% for skill in skills %}
-            <div class="skill-badge hover-glow">
-                <i class="fa-solid fa-code"></i> {{ skill }}
-            </div>
-            {% endfor %}
-        </div>
-    </section>
+                        <div class="browser-url">
+                            {{ project.title }}
+                        </div>
 
-    <section id="contact" class="section dark-bg animate-on-scroll">
-        <span class="sub-title">{{ t.contact_sub }}</span>
-        <h2>{{ t.contact_title }}</h2>
-        <p>{{ t.contact_desc }}</p>
-         
-        <div class="contact-wrapper">
-            <a href="tel:+37496787855" class="contact-box hover-glow">
+                    </div>
+
+
+                    <div class="project-preview">
+
+                        <div class="preview-decoration"></div>
+
+                        <span class="preview-number">
+                            0{{ loop.index }}
+                        </span>
+
+                        <span class="preview-label">
+                            WEB EXPERIENCE
+                        </span>
+
+                        <h4>
+                            {{ project.title }}
+                        </h4>
+
+                        <div class="preview-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-index">
+                    0{{ loop.index }}
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div class="project-info-top">
+
+                    <div>
+
+                        <span class="project-type">
+                            PROJECT 0{{ loop.index }}
+                        </span>
+
+                        <h3>
+                            {{ project.title }}
+                        </h3>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="{{ project.live_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Live Preview">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <a href="{{ project.github_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    {{ project.description }}
+                </p>
+
+
+                <div class="project-tags">
+
+                    {% for tag in project.tags %}
+
+                    <span>
+                        {{ tag }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section class="section skills-section">
+
+    <div class="section-heading reveal">
+
+        <span class="section-label">
+            {{ t.skills_sub }}
+        </span>
+
+        <h2>
+            {{ t.skills_title }}
+        </h2>
+
+    </div>
+
+
+    <div class="skills-wrapper">
+
+        {% for skill in skills %}
+
+        <div class="skill-item reveal">
+
+            <span class="skill-icon">
+                <i class="fa-solid fa-code"></i>
+            </span>
+
+            <span>
+                {{ skill }}
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square skill-arrow"></i>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="contact-background"></div>
+
+    <div class="contact-content reveal">
+
+        <span class="section-label">
+            {{ t.contact_sub }}
+        </span>
+
+        <h2>
+            {{ t.contact_title }}
+        </h2>
+
+        <p>
+            {{ t.contact_desc }}
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a href="tel:+37496787855"
+               class="contact-main-btn">
+
+                <span>
+                    {{ t.call_now }}
+                </span>
+
                 <i class="fa-solid fa-phone"></i>
-                <span>{{ t.call_now }}</span>
-                <p>+374 (96) 78-78-55</p>
+
             </a>
-            <a href="mailto:mezhlumyangarik@gmail.com" class="contact-box hover-glow">
-                <i class="fa-regular fa-envelope" style="color: #38bdf8;"></i>
-                <span>{{ t.email_us }}</span>
-                <p>mezhlumyangarik@gmail.com</p>
+
+
+            <a href="mailto:mezhlumyangarik@gmail.com"
+               class="contact-outline-btn">
+
+                <span>
+                    {{ t.email_us }}
+                </span>
+
+                <i class="fa-regular fa-envelope"></i>
+
             </a>
+
         </div>
+
+
+        <div class="contact-details">
+
+            <a href="tel:+37496787855">
+                +374 96 78 78 55
+            </a>
+
+            <span>•</span>
+
+            <a href="mailto:mezhlumyangarik@gmail.com">
+                mezhlumyangarik@gmail.com
+            </a>
+
+        </div>
+
 
         <div class="social-links">
-            <a href="https://instagram.com/mezhlumyan.webdev" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/mezhlumyangarik-hue" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 mezhlumyan.dev. {{ t.footer_rights }}</p>
-    </footer>
+            <a href="https://instagram.com/mezhlumyan.webdev"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a href="https://github.com/mezhlumyangarik-hue"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-logo">
+
+            <span>&lt;/&gt;</span>
+
+            mezhlumyan.dev
+
+        </div>
+
+        <p>
+            © 2026 mezhlumyan.dev.
+            {{ t.footer_rights }}
+        </p>
+
+        <a href="#home" class="back-top">
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING CALL
+========================================================= -->
+
+<a href="tel:+37496787855"
+   class="floating-call-btn"
+   aria-label="Call">
+
+    <span class="call-pulse"></span>
+
+    <i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
