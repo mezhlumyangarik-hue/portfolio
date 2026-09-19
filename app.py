@@ -37,7 +37,6 @@ TRANSLATIONS = {
         'email_us': 'Էլ. Փոստ',
         'footer_rights': 'Բոլոր իրավունքները պաշտպանված են:'
     },
-
     'ru': {
         'nav_about': 'О мне',
         'nav_services': 'Услуги',
@@ -72,7 +71,6 @@ TRANSLATIONS = {
         'email_us': 'Эл. почта',
         'footer_rights': 'Все права защищены.'
     },
-
     'en': {
         'nav_about': 'About',
         'nav_services': 'Services',
@@ -108,7 +106,6 @@ TRANSLATIONS = {
         'footer_rights': 'All rights reserved.'
     }
 }
-
 
 PROJECTS_DATA = {
     'hy': [
@@ -161,7 +158,6 @@ PROJECTS_DATA = {
             'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://tevosyan-furniture.vercel.app/'
         }
     ],
-
     'ru': [
         {
             'title': 'Imperial Gold',
@@ -212,7 +208,6 @@ PROJECTS_DATA = {
             'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://tevosyan-furniture.vercel.app/'
         }
     ],
-
     'en': [
         {
             'title': 'Imperial Gold',
@@ -268,7 +263,6 @@ PROJECTS_DATA = {
 @app.route('/')
 def home():
     lang = request.args.get('lang', 'hy')
-
     if lang not in TRANSLATIONS:
         lang = 'hy'
 
@@ -292,7 +286,6 @@ def home():
         skills=skills,
         current_lang=lang
     )
-
 
 if __name__ == '__main__':
     app.run(debug=True)
