@@ -9,7 +9,7 @@ TRANSLATIONS = {
         'nav_projects': 'Պորտֆոլիո',
         'nav_contact': 'Կապ',
         'nav_cta': 'Պատվիրել',
-        'hero_badge': ' Full-Stack Web Developer 2026',
+        'hero_badge': '✨ Full-Stack Web Developer 2026',
         'hero_title_1': 'Ստեղծում եմ',
         'hero_title_2': 'Բոմբ Կայքեր',
         'hero_desc': 'Ultra-fast, modern և high-converting կայքեր բիզնեսի, հյուրատների ու օնլայն խանութների համար:',
@@ -43,7 +43,7 @@ TRANSLATIONS = {
         'nav_projects': 'Портфолио',
         'nav_contact': 'Контакты',
         'nav_cta': 'Заказать',
-        'hero_badge': ' Full-Stack Web Developer 2026',
+        'hero_badge': '✨ Full-Stack Web Developer 2026',
         'hero_title_1': 'Создаю',
         'hero_title_2': 'Бомбические Сайты',
         'hero_desc': 'Ultra-fast, современные и продающие сайты для бизнеса, отелей и интернет-магазинов.',
@@ -77,7 +77,7 @@ TRANSLATIONS = {
         'nav_projects': 'Portfolio',
         'nav_contact': 'Contact',
         'nav_cta': 'Get Started',
-        'hero_badge': ' Full-Stack Web Developer 2026',
+        'hero_badge': '✨ Full-Stack Web Developer 2026',
         'hero_title_1': 'Building High Impact',
         'hero_title_2': 'Modern Websites',
         'hero_desc': 'Ultra-fast, modern, and high-converting websites for businesses, guest houses, and e-commerce stores.',
@@ -111,127 +111,151 @@ PROJECTS_DATA = {
     'hy': [
         {
             'title': 'Imperial Gold',
-            'description': 'Բարձրակարգ ոսկյա զարդերի և ադամանդյա ժամացույցների E-Commerce կայք:',
-            'tags': ['E-Commerce', 'JavaScript', 'UI/UX'],
+            'description': 'Բարձրակարգ ոսկյա զարդերի և ադամանդյա ժամացույցների E-Commerce կայք՝ հավաքածուով, ապրանքների էջերով, զամբյուղով և պատվերի համակարգով:',
+            'tags': ['E-Commerce', 'JavaScript', 'UI/UX', 'Responsive'],
             'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://imperial-gold-livid.vercel.app/'
         },
         {
             'title': 'TechPulse Store',
-            'description': 'Ժամանակակից տեխնիկայի E-Commerce խանութ՝ կատալոգով և զամբյուղով:',
-            'tags': ['E-Commerce', 'JavaScript', 'Responsive'],
+            'description': 'Ժամանակակից տեխնիկայի E-Commerce խանութ՝ ապրանքների կատալոգով, որոնմամբ, զամբյուղով և օնլայն գնումների հնարավորությամբ:',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://techpulse-store-0.vercel.app/'
         },
         {
             'title': 'Royal Ararat Hotel',
-            'description': 'Ժամանակակից հյուրանոցի կայք՝ սենյակների ամրագրման համակարգով:',
-            'tags': ['Hotel', 'Booking', 'JavaScript'],
+            'description': 'Ժամանակակից հյուրանոցի կայք՝ սենյակների ներկայացմամբ, ամրագրման համակարգով և հյուրերի համար հարմարավետ ինտերֆեյսով:',
+            'tags': ['Hotel', 'Booking', 'JavaScript', 'Responsive'],
             'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://hotel-demo-iota-tan.vercel.app/'
         },
         {
             'title': 'Kars Legacy',
-            'description': 'Դռների վաճառքի ժամանակակից կայք՝ ապրանքների ներկայացմամբ:',
-            'tags': ['Business', 'UI/UX', 'Responsive'],
+            'description': 'Դռների վաճառքի ժամանակակից կայք՝ ապրանքների ներկայացմամբ, գնով և կապի/պատվերի հնարավորությամբ:',
+            'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://kars-legacy.onrender.com/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://kars-legacy.onrender.com/'
+        },
+        {
+            'title': 'Royal Ararat Restaurant',
+            'description': 'Պրեմիում ռեստորանի կայք՝ մենյուով, ուտեստների քարտերով, զամբյուղով և օնլայն պատվերի համակարգով:',
+            'tags': ['Restaurant', 'E-Commerce', 'JavaScript', 'Responsive'],
+            'live_url': 'https://restaurant-demo-m.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue',
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://restaurant-demo-m.vercel.app/'
         },
         {
             'title': 'Tevosyan Furniture',
-            'description': 'Ժամանակակից կահույքի E-Commerce կայք և օնլայն պատվերներ:',
-            'tags': ['E-Commerce', 'UI/UX', 'Responsive'],
+            'description': 'Ժամանակակից կահույքի E-Commerce կայք՝ կատալոգով, կատեգորիաներով, զամբյուղով և օնլայն պատվերի համակարգով:',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://tevosyan-furniture.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://tevosyan-furniture.vercel.app/'
         }
     ],
     'ru': [
         {
             'title': 'Imperial Gold',
-            'description': 'Премиальный E-Commerce сайт ювелирных изделий и часов.',
-            'tags': ['E-Commerce', 'JavaScript', 'UI/UX'],
+            'description': 'Премиальный E-Commerce сайт ювелирных изделий и часов с каталогом, товарами, корзиной и системой заказа.',
+            'tags': ['E-Commerce', 'JavaScript', 'UI/UX', 'Responsive'],
             'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://imperial-gold-livid.vercel.app/'
         },
         {
             'title': 'TechPulse Store',
-            'description': 'Современный E-Commerce магазин техники с каталогом и корзиной.',
-            'tags': ['E-Commerce', 'JavaScript', 'Responsive'],
+            'description': 'Современный E-Commerce магазин техники с каталогом, поиском, корзиной и системой онлайн-покупок.',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://techpulse-store-0.vercel.app/'
         },
         {
             'title': 'Royal Ararat Hotel',
-            'description': 'Современный сайт отеля с системой бронирования номеров.',
-            'tags': ['Hotel', 'Booking', 'JavaScript'],
+            'description': 'Современный сайт отеля с презентацией номеров и системой бронирования.',
+            'tags': ['Hotel', 'Booking', 'JavaScript', 'Responsive'],
             'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://hotel-demo-iota-tan.vercel.app/'
         },
         {
             'title': 'Kars Legacy',
-            'description': 'Современный сайт для продажи дверей с презентацией товаров.',
-            'tags': ['Business', 'UI/UX', 'Responsive'],
+            'description': 'Современный сайт для продажи дверей с презентацией товаров, ценами и возможностью связи.',
+            'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://kars-legacy.onrender.com/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://kars-legacy.onrender.com/'
+        },
+        {
+            'title': 'Royal Ararat Restaurant',
+            'description': 'Премиальный сайт ресторана с меню, карточками блюд, корзиной и системой онлайн-заказа.',
+            'tags': ['Restaurant', 'E-Commerce', 'JavaScript', 'Responsive'],
+            'live_url': 'https://restaurant-demo-m.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue',
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://restaurant-demo-m.vercel.app/'
         },
         {
             'title': 'Tevosyan Furniture',
-            'description': 'Современный мебельный E-Commerce сайт с онлайн-заказами.',
-            'tags': ['E-Commerce', 'UI/UX', 'Responsive'],
+            'description': 'Современный мебельный E-Commerce сайт с каталогом, категориями, корзиной и системой онлайн-заказа.',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://tevosyan-furniture.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://tevosyan-furniture.vercel.app/'
         }
     ],
     'en': [
         {
             'title': 'Imperial Gold',
-            'description': 'Premium jewelry and luxury watches E-Commerce website.',
-            'tags': ['E-Commerce', 'JavaScript', 'UI/UX'],
+            'description': 'Premium jewelry and luxury watches E-Commerce website with collections, products, cart and ordering system.',
+            'tags': ['E-Commerce', 'JavaScript', 'UI/UX', 'Responsive'],
             'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://imperial-gold-livid.vercel.app/'
         },
         {
             'title': 'TechPulse Store',
-            'description': 'Modern electronics E-Commerce store with product catalog.',
-            'tags': ['E-Commerce', 'JavaScript', 'Responsive'],
+            'description': 'Modern electronics E-Commerce store with product catalog, search, shopping cart and online purchasing.',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://techpulse-store-0.vercel.app/'
         },
         {
             'title': 'Royal Ararat Hotel',
-            'description': 'Modern hotel website with room booking functionality.',
-            'tags': ['Hotel', 'Booking', 'JavaScript'],
+            'description': 'Modern hotel website with room presentation and booking functionality.',
+            'tags': ['Hotel', 'Booking', 'JavaScript', 'Responsive'],
             'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://hotel-demo-iota-tan.vercel.app/'
         },
         {
             'title': 'Kars Legacy',
-            'description': 'Modern door sales website with product presentation.',
-            'tags': ['Business', 'UI/UX', 'Responsive'],
+            'description': 'Modern door sales website with product presentation, pricing and contact/order functionality.',
+            'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://kars-legacy.onrender.com/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://kars-legacy.onrender.com/'
+        },
+        {
+            'title': 'Royal Ararat Restaurant',
+            'description': 'Premium restaurant website with menu, food cards, shopping cart and online ordering system.',
+            'tags': ['Restaurant', 'E-Commerce', 'JavaScript', 'Responsive'],
+            'live_url': 'https://restaurant-demo-m.vercel.app/',
+            'github_url': 'https://github.com/mezhlumyangarik-hue',
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://restaurant-demo-m.vercel.app/'
         },
         {
             'title': 'Tevosyan Furniture',
-            'description': 'Modern furniture E-Commerce website with online ordering.',
-            'tags': ['E-Commerce', 'UI/UX', 'Responsive'],
+            'description': 'Modern furniture E-Commerce website with catalog, categories, shopping cart and online ordering system.',
+            'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://tevosyan-furniture.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80'
+            'preview_url': 'https://image.thum.io/get/width/1200/crop/800/noanimate/https://tevosyan-furniture.vercel.app/'
         }
     ]
 }
@@ -246,11 +270,22 @@ def home():
     projects = PROJECTS_DATA[lang]
 
     skills = [
-        'HTML5 / CSS3', 'JavaScript (ES6+)', 'Python / Flask', 
-        'Git / GitHub', 'Responsive Web Design', 'UI/UX Design', 'SEO Fundamentals'
+        'HTML5 / CSS3',
+        'JavaScript (ES6+)',
+        'Python / Flask',
+        'Git / GitHub',
+        'Responsive Web Design',
+        'UI/UX Design',
+        'SEO Fundamentals'
     ]
 
-    return render_template('index.html', t=t, projects=projects, skills=skills, current_lang=lang)
+    return render_template(
+        'index.html',
+        t=t,
+        projects=projects,
+        skills=skills,
+        current_lang=lang
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
