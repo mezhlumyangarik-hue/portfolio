@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garik Mezhlumyan | Portfolio</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,16 +27,12 @@
             <a href="#" class="text-xl font-black tracking-wider bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                 GARIK.DEV
             </a>
-
-            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
                 <a href="#about" class="hover:text-blue-400 transition-colors">{{ t.nav_about }}</a>
                 <a href="#services" class="hover:text-blue-400 transition-colors">{{ t.nav_services }}</a>
                 <a href="#projects" class="hover:text-blue-400 transition-colors">{{ t.nav_projects }}</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors">{{ t.nav_contact }}</a>
             </nav>
-
-            <!-- Language Switcher & CTA -->
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-1 bg-gray-800/80 p-1 rounded-lg border border-gray-700 text-xs">
                     <a href="/?lang=hy" class="px-2.5 py-1 rounded-md transition-all {% if current_lang == 'hy' %}bg-blue-600 text-white font-bold{% else %}text-gray-400 hover:text-white{% endif %}">HY</a>
@@ -51,11 +46,13 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 md:pt-48 md:pb-32 relative overflow-hidden">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <!-- Hero Section with Custom Background Image & Overlay -->
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 relative overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80');">
+        <!-- Dark Overlay for Readability -->
+        <div class="absolute inset-0 bg-darkBg/90 backdrop-blur-sm"></div>
+
         <div class="container mx-auto px-6 text-center relative z-10">
-            <span class="inline-block text-blue-400 font-semibold tracking-wider uppercase text-xs md:text-sm bg-blue-950/60 px-4 py-1.5 rounded-full border border-blue-500/30 mb-6">
+            <span class="inline-block text-blue-400 font-semibold tracking-wider uppercase text-xs md:text-sm bg-blue-950/80 px-4 py-1.5 rounded-full border border-blue-500/30 mb-6 shadow-lg">
                 {{ t.hero_badge }}
             </span>
             <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6">
@@ -64,14 +61,14 @@
                     {{ t.hero_title_2 }}
                 </span>
             </h1>
-            <p class="text-gray-400 text-base md:text-xl max-w-2xl mx-auto mb-10">
+            <p class="text-gray-300 text-base md:text-xl max-w-2xl mx-auto mb-10">
                 {{ t.hero_desc }}
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-blue-600/30 text-center">
                     {{ t.hero_btn_primary }}
                 </a>
-                <a href="#projects" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 text-gray-200 px-8 py-4 rounded-xl font-semibold border border-gray-700 transition-all text-center">
+                <a href="#projects" class="w-full sm:w-auto bg-gray-800/80 hover:bg-gray-700 text-gray-200 px-8 py-4 rounded-xl font-semibold border border-gray-700 transition-all text-center">
                     {{ t.hero_btn_secondary }}
                 </a>
             </div>
@@ -89,7 +86,7 @@
                     {{ t.about_title }}
                 </h2>
             </div>
-            <p class="text-gray-300 text-center text-lg leading-relaxed bg-gray-900/60 p-8 rounded-2xl border border-gray-800">
+            <p class="text-gray-300 text-center text-lg leading-relaxed bg-gray-900/60 p-8 rounded-2xl border border-gray-800 shadow-xl">
                 {{ t.about_text }}
             </p>
         </div>
@@ -135,21 +132,14 @@
                 </h2>
             </div>
 
-            <!-- Projects Grid with Images -->
+            <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for project in projects %}
                 <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col group">
-                    
-                    <!-- Project Preview Image -->
                     <div class="relative overflow-hidden h-48 bg-gray-950">
-                        <img src="{{ project.preview_url }}" 
-                             alt="{{ project.title }}" 
-                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                             loading="lazy">
+                        <img src="{{ project.preview_url }}" alt="{{ project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent opacity-60"></div>
                     </div>
-
-                    <!-- Project Content -->
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
                             {{ project.title }}
@@ -157,8 +147,6 @@
                         <p class="text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
                             {{ project.description }}
                         </p>
-
-                        <!-- Tags -->
                         <div class="flex flex-wrap gap-2 mb-6">
                             {% for tag in project.tags %}
                             <span class="text-xs bg-gray-800 text-blue-300 px-2.5 py-1 rounded-md border border-gray-700">
@@ -166,8 +154,6 @@
                             </span>
                             {% endfor %}
                         </div>
-
-                        <!-- Action Links -->
                         <div class="flex items-center justify-between pt-4 border-t border-gray-800 mt-auto">
                             <a href="{{ project.live_url }}" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">
                                 <span>Կայքը</span>
