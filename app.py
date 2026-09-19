@@ -115,7 +115,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'UI/UX', 'Responsive'],
             'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+           
         },
         {
             'title': 'TechPulse Store',
@@ -123,7 +123,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+            
         },
         {
             'title': 'Royal Ararat Hotel',
@@ -131,7 +131,7 @@ PROJECTS_DATA = {
             'tags': ['Hotel', 'Booking', 'JavaScript', 'Responsive'],
             'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'
+            
         },
         {
             'title': 'Kars Legacy',
@@ -139,7 +139,7 @@ PROJECTS_DATA = {
             'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://kars-legacy.onrender.com/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+          
         },
         {
             'title': 'Royal Ararat Restaurant',
@@ -147,7 +147,7 @@ PROJECTS_DATA = {
             'tags': ['Restaurant', 'E-Commerce', 'JavaScript', 'Responsive'],
             'live_url': 'https://restaurant-demo-m.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
+            
         },
         {
             'title': 'Tevosyan Furniture',
@@ -155,7 +155,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://tevosyan-furniture.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+            
         }
     ],
     'ru': [
@@ -165,7 +165,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'UI/UX', 'Responsive'],
             'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+           
         },
         {
             'title': 'TechPulse Store',
@@ -173,7 +173,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+            
         },
         {
             'title': 'Royal Ararat Hotel',
@@ -181,7 +181,7 @@ PROJECTS_DATA = {
             'tags': ['Hotel', 'Booking', 'JavaScript', 'Responsive'],
             'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'
+           
         },
         {
             'title': 'Kars Legacy',
@@ -189,7 +189,7 @@ PROJECTS_DATA = {
             'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://kars-legacy.onrender.com/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+           
         },
         {
             'title': 'Royal Ararat Restaurant',
@@ -197,7 +197,7 @@ PROJECTS_DATA = {
             'tags': ['Restaurant', 'E-Commerce', 'JavaScript', 'Responsive'],
             'live_url': 'https://restaurant-demo-m.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
+         
         },
         {
             'title': 'Tevosyan Furniture',
@@ -205,7 +205,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://tevosyan-furniture.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+           
         }
     ],
     'en': [
@@ -215,7 +215,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'UI/UX', 'Responsive'],
             'live_url': 'https://imperial-gold-livid.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+           
         },
         {
             'title': 'TechPulse Store',
@@ -223,7 +223,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://techpulse-store-0.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'
+
         },
         {
             'title': 'Royal Ararat Hotel',
@@ -231,7 +231,7 @@ PROJECTS_DATA = {
             'tags': ['Hotel', 'Booking', 'JavaScript', 'Responsive'],
             'live_url': 'https://hotel-demo-iota-tan.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'
+          
         },
         {
             'title': 'Kars Legacy',
@@ -239,7 +239,7 @@ PROJECTS_DATA = {
             'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://kars-legacy.onrender.com/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+           
         },
         {
             'title': 'Royal Ararat Restaurant',
@@ -247,7 +247,7 @@ PROJECTS_DATA = {
             'tags': ['Restaurant', 'E-Commerce', 'JavaScript', 'Responsive'],
             'live_url': 'https://restaurant-demo-m.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
+            
         },
         {
             'title': 'Tevosyan Furniture',
@@ -255,7 +255,7 @@ PROJECTS_DATA = {
             'tags': ['E-Commerce', 'JavaScript', 'Responsive', 'UI/UX'],
             'live_url': 'https://tevosyan-furniture.vercel.app/',
             'github_url': 'https://github.com/mezhlumyangarik-hue',
-            'preview_url': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+          
         }
     ]
 }
