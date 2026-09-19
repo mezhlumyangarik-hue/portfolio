@@ -1,754 +1,395 @@
 <!DOCTYPE html>
-
 <html lang="{{ current_lang }}">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
 
     <title>Garik Mezhlumyan | Web Developer</title>
 
-
-
     <meta name="description"
-
           content="Garik Mezhlumyan — Web Developer creating modern, fast and interactive websites.">
 
-
-
     <link rel="icon" type="image/svg+xml"
-
           href="data:image/svg+xml;utf8,
-
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-
           <circle cx='256' cy='256' r='230' fill='%23060910' stroke='%236366f1' stroke-width='24'/>
-
           <path d='M190 320 L126 256 L190 192 M322 192 L386 256 L322 320 M280 150 L232 362'
-
           fill='none' stroke='%2338bdf8' stroke-width='36'
-
           stroke-linecap='round' stroke-linejoin='round'/>
-
           </svg>">
 
-
-
     <!-- Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
-
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-
           rel="stylesheet">
 
-
-
     <!-- Font Awesome -->
-
     <link rel="stylesheet"
-
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
-
     <!-- Main CSS -->
-
     <link rel="stylesheet"
-
           href="{{ url_for('static', filename='style.css') }}">
-
 </head>
-
-
 
 <body>
 
-
-
 <!-- =========================================================
-
-    BACKGROUND
-
+     BACKGROUND
 ========================================================= -->
-
-
 
 <div class="noise"></div>
 
-
-
 <div class="background-orb orb-1"></div>
-
 <div class="background-orb orb-2"></div>
-
 <div class="background-orb orb-3"></div>
-
-
 
 <div class="grid-background"></div>
 
 
-
-
-
 <!-- =========================================================
-
-    CUSTOM CURSOR
-
+     CUSTOM CURSOR
 ========================================================= -->
 
-
-
 <div class="cursor-dot"></div>
-
 <div class="cursor-ring"></div>
 
 
-
-
-
 <!-- =========================================================
-
-    HEADER
-
+     HEADER
 ========================================================= -->
-
-
 
 <header class="site-header" id="siteHeader">
 
-
-
     <nav class="navbar">
-
-
 
         <a href="?lang={{ current_lang }}" class="logo">
 
-
-
             <span class="logo-symbol">&lt;/&gt;</span>
 
-
-
             <span>
-
                 mezhlumyan<span class="logo-dot">.</span>dev
-
             </span>
-
-
 
         </a>
 
 
-
-
-
         <div class="nav-links" id="navLinks">
 
-
-
             <a href="#about" class="nav-link">
-
                 {{ t.nav_about }}
-
             </a>
-
-
 
             <a href="#services" class="nav-link">
-
                 {{ t.nav_services }}
-
             </a>
-
-
 
             <a href="#projects" class="nav-link">
-
                 {{ t.nav_projects }}
-
             </a>
-
-
 
             <a href="#contact" class="nav-link">
-
                 {{ t.nav_contact }}
-
             </a>
 
-
-
         </div>
-
-
-
 
 
         <div class="nav-actions">
 
-
-
             <div class="lang-switch">
 
-
-
                 <a href="?lang=hy"
-
                    class="{% if current_lang == 'hy' %}active{% endif %}">
-
                     AM
-
                 </a>
-
-
 
                 <a href="?lang=ru"
-
                    class="{% if current_lang == 'ru' %}active{% endif %}">
-
                     RU
-
                 </a>
-
-
 
                 <a href="?lang=en"
-
                    class="{% if current_lang == 'en' %}active{% endif %}">
-
                     EN
-
                 </a>
-
-
 
             </div>
 
 
-
-
-
             <a href="tel:+37496787855"
-
                class="header-cta">
-
-
 
                 {{ t.nav_cta }}
 
-
-
                 <i class="fa-solid fa-arrow-right"></i>
-
-
 
             </a>
 
 
-
-
-
             <button class="menu-btn"
-
                     id="menuBtn"
-
                     aria-label="Menu">
 
-
-
                 <span></span>
-
                 <span></span>
-
                 <span></span>
-
-
 
             </button>
 
-
-
         </div>
 
-
-
     </nav>
-
-
 
 </header>
 
 
-
-
-
 <!-- =========================================================
-
-    HERO
-
+     HERO
 ========================================================= -->
-
-
 
 <main>
 
-
-
 <section class="hero" id="home">
-
-
 
     <div class="hero-container">
 
 
-
         <!-- LEFT -->
-
-
 
         <div class="hero-content reveal">
 
-
-
             <div class="availability">
-
-
 
                 <span class="availability-dot"></span>
 
-
-
                 <span>{{ t.hero_badge }}</span>
 
-
-
             </div>
-
-
-
 
 
             <div class="hero-small-title">
 
-
-
                 WEB DEVELOPER
-
-
 
                 <span></span>
 
-
-
                 2026
 
-
-
             </div>
-
-
-
 
 
             <h1>
 
-
-
                 <span class="hero-line">
-
                     {{ t.hero_title_1 }}
-
                 </span>
-
-
 
                 <span class="hero-gradient">
-
                     {{ t.hero_title_2 }}
-
                 </span>
-
-
 
             </h1>
 
 
-
-
-
             <p class="hero-description">
 
-
-
                 {{ t.hero_desc }}
-
-
 
             </p>
 
 
-
-
-
             <div class="hero-buttons">
 
-
-
                 <a href="#projects"
-
                    class="main-btn">
-
-
 
                     <span>{{ t.hero_btn_secondary }}</span>
 
-
-
                     <i class="fa-solid fa-arrow-down"></i>
 
-
-
                 </a>
-
-
-
 
 
                 <a href="#contact"
-
                    class="outline-btn">
-
-
 
                     <span>{{ t.hero_btn_primary }}</span>
 
-
-
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-
 
                 </a>
 
-
-
             </div>
-
-
-
 
 
             <div class="hero-stats">
 
-
-
                 <div class="stat">
-
-
 
                     <strong>06+</strong>
 
-
-
                     <span>Projects</span>
-
-
 
                 </div>
 
-
-
                 <div class="stat">
-
-
 
                     <strong>03</strong>
 
-
-
                     <span>Languages</span>
 
-
-
                 </div>
-
-
 
                 <div class="stat">
 
-
-
                     <strong>100%</strong>
-
-
 
                     <span>Responsive</span>
 
-
-
                 </div>
 
-
-
             </div>
-
-
 
         </div>
 
 
-
-
-
-        <!-- RIGHT VISUAL (Այստեղ ավելացվել է նկարի կամ վիզուալի ցուցադրման հնարավորություն) -->
-
-
+        <!-- RIGHT VISUAL -->
 
         <div class="hero-visual reveal-right">
 
-
+            <!-- Header / Hero image -->
+            <div class="hero-image-card">
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85"
+                    alt="Modern web development workspace"
+                    class="hero-header-image"
+                    loading="eager"
+                >
+                <div class="hero-image-overlay"></div>
+                <span class="hero-image-tag">WEB DEVELOPMENT</span>
+            </div>
 
             <div class="visual-glow"></div>
 
 
-
             <!-- Orbit -->
 
-
-
             <div class="orbit orbit-1"></div>
-
             <div class="orbit orbit-2"></div>
-
             <div class="orbit orbit-3"></div>
-
 
 
             <!-- Laptop -->
 
-
-
             <div class="laptop">
-
-
 
                 <div class="laptop-screen">
 
-
-
                     <div class="screen-top">
 
-
-
                         <div class="window-dots">
-
                             <span></span>
-
                             <span></span>
-
                             <span></span>
-
                         </div>
-
-
 
                         <div class="screen-url">
-
                             mezhlumyan.dev
-
                         </div>
 
-
-
                     </div>
-
-
-
 
 
                     <div class="code-area">
 
-
-
                         <div class="code-sidebar">
 
                             <div></div>
-
                             <div></div>
-
                             <div></div>
-
                             <div></div>
-
                             <div></div>
 
                         </div>
-
-
-
 
 
                         <div class="code-content">
 
-
-
                             <span class="code-comment">
-
                                 &lt;!-- digital experience --&gt;
-
                             </span>
 
-
-
                             <span>
-
                                 <b>&lt;section</b>
-
                                 class="hero"
-
                                 <b>&gt;</b>
-
                             </span>
 
-
-
                             <span class="indent">
-
                                 <b>&lt;h1&gt;</b>
-
                                 Build Something
-
                                 <b>&lt;/h1&gt;</b>
-
                             </span>
 
-
-
                             <span class="indent">
-
                                 <b>&lt;p&gt;</b>
-
                                 Modern Web Experience
-
                                 <b>&lt;/p&gt;</b>
-
                             </span>
-
-
 
                             <span class="indent">
-
                                 <b>&lt;button&gt;</b>
-
                                 Explore
-
                                 <b>&lt;/button&gt;</b>
-
                             </span>
-
-
 
                             <span>
-
                                 <b>&lt;/section&gt;</b>
-
                             </span>
-
-
 
                             <div class="code-line"></div>
-
                             <div class="code-line short"></div>
-
                             <div class="code-line medium"></div>
-
-
 
                         </div>
 
-
-
                     </div>
-
-
-
 
 
                     <div class="preview-window">
 
-
-
                         <div class="preview-title">
-
                             Better Digital Experiences
-
                         </div>
-
-
 
                         <div class="preview-text">
-
                             Modern websites.
-
                             Clean code.
-
                             Real results.
-
                         </div>
-
-
 
                         <div class="preview-button">
-
                             Explore
-
                         </div>
-
-
 
                     </div>
 
-
-
                 </div>
-
-
-
 
 
                 <div class="laptop-base">
 
-
-
                     <div class="laptop-keyboard"></div>
 
-
-
                 </div>
-
-
 
             </div>
 
 
-
-
-
             <!-- Floating Technology Cards -->
-
-
 
             <div class="tech-card tech-html">
 
@@ -757,7 +398,6 @@
                 <span>HTML5</span>
 
             </div>
-
 
 
             <div class="tech-card tech-css">
@@ -769,7 +409,6 @@
             </div>
 
 
-
             <div class="tech-card tech-js">
 
                 <i class="fa-brands fa-js"></i>
@@ -777,7 +416,6 @@
                 <span>JavaScript</span>
 
             </div>
-
 
 
             <div class="tech-card tech-python">
@@ -789,7 +427,6 @@
             </div>
 
 
-
             <div class="tech-card tech-react">
 
                 <i class="fa-brands fa-react"></i>
@@ -799,1283 +436,648 @@
             </div>
 
 
-
             <div class="floating-code">
-
                 &lt;/&gt;
-
             </div>
-
-
 
             <div class="floating-bracket">
-
                 { }
-
             </div>
-
-
 
         </div>
 
-
-
     </div>
-
-
-
 
 
     <!-- SCROLL -->
 
-
-
     <a href="#about" class="scroll-indicator">
-
-
 
         <span>SCROLL TO EXPLORE</span>
 
-
-
         <i class="fa-solid fa-arrow-down"></i>
-
-
 
     </a>
 
-
-
 </section>
 
 
-
-
-
 <!-- =========================================================
-
-    MOVING TICKER
-
+     MOVING TICKER
 ========================================================= -->
-
-
 
 <section class="ticker">
 
-
-
     <div class="ticker-track">
 
-
-
         <span>CODE</span>
-
         <i>✦</i>
-
-
 
         <span>DESIGN</span>
-
         <i>✦</i>
-
-
 
         <span>MOTION</span>
-
         <i>✦</i>
-
-
 
         <span>EXPERIENCE</span>
-
         <i>✦</i>
-
-
 
         <span>CODE</span>
-
         <i>✦</i>
-
-
 
         <span>DESIGN</span>
-
         <i>✦</i>
-
-
 
         <span>MOTION</span>
-
         <i>✦</i>
-
-
 
         <span>EXPERIENCE</span>
-
         <i>✦</i>
-
-
 
     </div>
-
-
 
 </section>
 
 
-
-
-
 <!-- =========================================================
-
-    ABOUT
-
+     ABOUT
 ========================================================= -->
-
-
 
 <section id="about" class="section about-section">
 
-
-
     <div class="section-heading reveal">
 
-
-
         <span class="section-label">
-
             {{ t.about_sub }}
-
         </span>
 
-
-
         <h2>
-
             {{ t.about_title }}
-
         </h2>
 
-
-
     </div>
-
-
-
 
 
     <div class="about-grid">
 
 
-
         <div class="about-main reveal-left">
 
-
-
             <div class="about-number">
-
                 01
-
             </div>
 
-
-
             <h3>
-
                 I build digital experiences
-
                 <span>that matter.</span>
-
             </h3>
 
-
-
             <p>
-
                 {{ t.about_text }}
-
             </p>
-
 
 
             <div class="about-line"></div>
 
 
-
             <div class="about-bottom">
-
-
 
                 <span>Based in Armenia</span>
 
-
-
                 <span>Available for projects</span>
-
-
 
             </div>
 
-
-
         </div>
-
-
-
 
 
         <div class="about-cards reveal-right">
 
-
-
             <div class="mini-card">
-
-
 
                 <i class="fa-solid fa-bolt"></i>
 
-
-
                 <div>
-
                     <strong>Fast</strong>
-
                     <span>Performance focused</span>
-
                 </div>
-
-
 
             </div>
 
 
-
-
-
             <div class="mini-card">
-
-
 
                 <i class="fa-solid fa-mobile-screen"></i>
 
-
-
                 <div>
-
                     <strong>Responsive</strong>
-
                     <span>Every screen matters</span>
-
                 </div>
-
-
 
             </div>
 
 
-
-
-
             <div class="mini-card">
-
-
 
                 <i class="fa-solid fa-code"></i>
 
-
-
                 <div>
-
                     <strong>Clean Code</strong>
-
                     <span>Structured & scalable</span>
-
                 </div>
 
-
-
             </div>
-
-
-
 
 
             <div class="mini-card">
 
-
-
                 <i class="fa-solid fa-rocket"></i>
 
-
-
                 <div>
-
                     <strong>Modern</strong>
-
                     <span>Built for 2026</span>
-
                 </div>
-
-
 
             </div>
 
-
-
         </div>
 
-
-
     </div>
-
-
 
 </section>
 
 
-
-
-
 <!-- =========================================================
-
-    SERVICES
-
+     SERVICES
 ========================================================= -->
-
-
 
 <section id="services" class="section services-section">
 
-
-
     <div class="section-heading reveal">
 
-
-
         <span class="section-label">
-
             {{ t.services_sub }}
-
         </span>
 
-
-
         <h2>
-
             {{ t.services_title }}
-
         </h2>
 
-
-
     </div>
-
-
-
 
 
     <div class="services-grid">
 
 
-
         <article class="service-card reveal">
 
-
-
             <div class="service-number">
-
                 01
-
             </div>
 
-
-
             <div class="service-icon">
-
                 <i class="fa-solid fa-hotel"></i>
-
             </div>
 
-
-
             <h3>
-
                 {{ t.srv1_title }}
-
             </h3>
 
-
-
             <p>
-
                 {{ t.srv1_desc }}
-
             </p>
 
-
-
             <div class="service-arrow">
-
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
             </div>
-
-
 
         </article>
 
 
-
-
-
         <article class="service-card reveal">
 
-
-
             <div class="service-number">
-
                 02
-
             </div>
-
-
 
             <div class="service-icon">
-
                 <i class="fa-solid fa-cart-shopping"></i>
-
             </div>
-
-
 
             <h3>
-
                 {{ t.srv2_title }}
-
             </h3>
 
-
-
             <p>
-
                 {{ t.srv2_desc }}
-
             </p>
 
-
-
             <div class="service-arrow">
-
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
             </div>
 
-
-
         </article>
-
-
-
 
 
         <article class="service-card reveal">
 
-
-
             <div class="service-number">
-
                 03
-
             </div>
-
-
 
             <div class="service-icon">
-
                 <i class="fa-solid fa-laptop-code"></i>
-
             </div>
-
-
 
             <h3>
-
                 {{ t.srv3_title }}
-
             </h3>
 
-
-
             <p>
-
                 {{ t.srv3_desc }}
-
             </p>
 
-
-
             <div class="service-arrow">
-
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
             </div>
 
-
-
         </article>
-
 
 
     </div>
-
-
 
 </section>
 
 
-
-
-
 <!-- =========================================================
-
-    PROJECTS (Այստեղ արդեն ունեք նկարների ցուցադրման ապահովում Ձեր նախագծերի համար)
-
+     PROJECTS
 ========================================================= -->
-
-
 
 <section id="projects" class="section projects-section">
 
-
-
     <div class="section-heading projects-heading reveal">
-
-
 
         <div>
 
-
-
             <span class="section-label">
-
                 {{ t.projects_sub }}
-
             </span>
 
-
-
             <h2>
-
                 {{ t.projects_title }}
-
             </h2>
 
-
-
         </div>
-
-
 
         <div class="projects-counter">
-
             06 / WORKS
-
         </div>
 
-
-
     </div>
-
-
-
 
 
     <div class="projects-grid">
 
-
-
         {% for project in projects %}
-
-
 
         <article class="project-card reveal">
 
-
-
             <div class="project-visual">
-
-
 
                 <div class="project-browser">
 
-
-
                     <div class="browser-top">
 
-
-
                         <div class="browser-dots">
-
                             <span></span>
-
                             <span></span>
-
                             <span></span>
-
                         </div>
-
-
 
                         <div class="browser-url">
-
                             {{ project.title }}
-
                         </div>
 
-
-
                     </div>
-
-
-
 
 
                     <div class="project-preview project-preview-live">
 
-
-
                         {% if project.preview_url %}
-
                         <img
-
                             src="{{ project.preview_url }}"
-
                             alt="{{ project.title }} website preview"
-
                             class="project-preview-image"
-
                             loading="lazy"
-
                             onerror="this.style.display='none'; this.parentElement.classList.add('preview-image-error');"
-
                         >
-
                         {% endif %}
-
-
 
                         <div class="preview-live-overlay"></div>
 
-
-
                         <div class="preview-decoration"></div>
 
-
-
                         <span class="preview-number">
-
                             0{{ loop.index }}
-
                         </span>
-
-
 
                         <span class="preview-label">
-
                             WEB EXPERIENCE
-
                         </span>
 
-
-
                         <h4>
-
                             {{ project.title }}
-
                         </h4>
 
-
-
                         <div class="preview-lines">
-
                             <span></span>
-
                             <span></span>
-
                             <span></span>
-
                         </div>
 
-
-
                         <a
-
                             href="{{ project.live_url }}"
-
                             target="_blank"
-
                             rel="noopener noreferrer"
-
                             class="preview-open-button"
-
                             aria-label="Open {{ project.title }}"
-
                         >
-
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                         </a>
-
-
 
                     </div>
 
-
-
                 </div>
-
-
-
 
 
                 <div class="project-index">
-
                     0{{ loop.index }}
-
                 </div>
 
-
-
             </div>
-
-
-
 
 
             <div class="project-info">
 
-
-
                 <div class="project-info-top">
-
-
 
                     <div>
 
-
-
                         <span class="project-type">
-
                             PROJECT 0{{ loop.index }}
-
                         </span>
 
-
-
                         <h3>
-
                             {{ project.title }}
-
                         </h3>
 
-
-
                     </div>
-
-
-
 
 
                     <div class="project-links">
 
-
-
                         <a href="{{ project.live_url }}"
-
                            target="_blank"
-
                            rel="noopener noreferrer"
-
                            title="Live Preview">
-
-
 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-
-
                         </a>
-
-
-
 
 
                         <a href="{{ project.github_url }}"
-
                            target="_blank"
-
                            rel="noopener noreferrer"
-
                            title="GitHub">
-
-
 
                             <i class="fa-brands fa-github"></i>
 
-
-
                         </a>
 
-
-
                     </div>
-
-
 
                 </div>
 
 
-
-
-
                 <p>
-
                     {{ project.description }}
-
                 </p>
-
-
-
 
 
                 <div class="project-tags">
 
-
-
                     {% for tag in project.tags %}
 
-
-
                     <span>
-
                         {{ tag }}
-
                     </span>
-
-
 
                     {% endfor %}
 
-
-
                 </div>
-
-
 
             </div>
 
-
-
         </article>
-
-
 
         {% endfor %}
 
-
-
     </div>
-
-
 
 </section>
 
 
-
-
-
 <!-- =========================================================
-
-    SKILLS
-
+     SKILLS
 ========================================================= -->
-
-
 
 <section class="section skills-section">
 
-
-
     <div class="section-heading reveal">
 
-
-
         <span class="section-label">
-
             {{ t.skills_sub }}
-
         </span>
 
-
-
         <h2>
-
             {{ t.skills_title }}
-
         </h2>
 
-
-
     </div>
-
-
-
 
 
     <div class="skills-wrapper">
 
-
-
         {% for skill in skills %}
-
-
 
         <div class="skill-item reveal">
 
-
-
             <span class="skill-icon">
-
                 <i class="fa-solid fa-code"></i>
-
             </span>
-
-
 
             <span>
-
                 {{ skill }}
-
             </span>
-
-
 
             <i class="fa-solid fa-arrow-up-right-from-square skill-arrow"></i>
 
-
-
         </div>
-
-
 
         {% endfor %}
 
-
-
     </div>
-
-
 
 </section>
 
 
-
-
-
 <!-- =========================================================
-
-    CONTACT
-
+     CONTACT
 ========================================================= -->
-
-
 
 <section id="contact" class="contact-section">
 
-
-
     <div class="contact-background"></div>
-
-
 
     <div class="contact-content reveal">
 
-
-
         <span class="section-label">
-
             {{ t.contact_sub }}
-
         </span>
 
-
-
         <h2>
-
             {{ t.contact_title }}
-
         </h2>
 
-
-
         <p>
-
             {{ t.contact_desc }}
-
         </p>
-
-
-
 
 
         <div class="contact-buttons">
 
-
-
             <a href="tel:+37496787855"
-
                class="contact-main-btn">
 
-
-
                 <span>
-
                     {{ t.call_now }}
-
                 </span>
-
-
 
                 <i class="fa-solid fa-phone"></i>
 
-
-
             </a>
-
-
-
 
 
             <a href="mailto:mezhlumyangarik@gmail.com"
-
                class="contact-outline-btn">
 
-
-
                 <span>
-
                     {{ t.email_us }}
-
                 </span>
-
-
 
                 <i class="fa-regular fa-envelope"></i>
 
-
-
             </a>
 
-
-
         </div>
-
-
-
 
 
         <div class="contact-details">
 
-
-
             <a href="tel:+37496787855">
-
                 +374 96 78 78 55
-
             </a>
-
-
 
             <span>•</span>
 
-
-
             <a href="mailto:mezhlumyangarik@gmail.com">
-
                 mezhlumyangarik@gmail.com
-
             </a>
 
-
-
         </div>
-
-
-
 
 
         <div class="social-links">
 
-
-
             <a href="https://instagram.com/mezhlumyan.webdev"
-
                target="_blank"
-
                rel="noopener noreferrer">
-
-
 
                 <i class="fa-brands fa-instagram"></i>
 
-
-
             </a>
-
-
-
 
 
             <a href="https://github.com/mezhlumyangarik-hue"
-
                target="_blank"
-
                rel="noopener noreferrer">
-
-
 
                 <i class="fa-brands fa-github"></i>
 
-
-
             </a>
-
-
 
         </div>
 
-
-
     </div>
 
-
-
 </section>
-
-
 
 </main>
 
 
-
-
-
 <!-- =========================================================
-
-    FOOTER
-
+     FOOTER
 ========================================================= -->
-
-
 
 <footer>
 
-
-
     <div class="footer-inner">
-
-
 
         <div class="footer-logo">
 
-
-
             <span>&lt;/&gt;</span>
-
-
 
             mezhlumyan.dev
 
-
-
         </div>
 
-
-
         <p>
-
             © 2026 mezhlumyan.dev.
-
             {{ t.footer_rights }}
-
         </p>
-
-
 
         <a href="#home" class="back-top">
 
-
-
             <i class="fa-solid fa-arrow-up"></i>
-
-
 
         </a>
 
-
-
     </div>
-
-
 
 </footer>
 
 
-
-
-
 <!-- =========================================================
-
-    FLOATING CALL
-
+     FLOATING CALL
 ========================================================= -->
 
-
-
 <a href="tel:+37496787855"
-
    class="floating-call-btn"
-
    aria-label="Call">
-
-
 
     <span class="call-pulse"></span>
 
-
-
     <i class="fa-solid fa-phone"></i>
-
-
 
 </a>
 
 
-
-
-
 <!-- =========================================================
-
-    JAVASCRIPT
-
+     JAVASCRIPT
 ========================================================= -->
-
-
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
-
-
 </body>
-
 </html>
