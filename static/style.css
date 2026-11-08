@@ -281,3 +281,77 @@ footer{border-top:1px solid rgba(255,255,255,.05);padding:25px 20px}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .reveal,.reveal-left,.reveal-right{opacity:1;transform:none}
 }
+
+
+/* =========================================================
+   MOTION LAYER — scroll progress, entrances, spotlight, dots
+========================================================= */
+
+html{scrollbar-width:thin;scrollbar-color:#334155 var(--bg)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--indigo),var(--blue));border-radius:10px;border:2px solid var(--bg)}
+body{animation:pageIn .7s ease both}
+@keyframes pageIn{from{opacity:0}}
+
+/* Scroll progress bar */
+.progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:1100;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--blue),var(--indigo),var(--purple));box-shadow:0 0 14px rgba(99,102,241,.7);pointer-events:none}
+
+/* Side dots navigation */
+.dots{position:fixed;right:22px;top:50%;translate:0 -50%;z-index:800;display:flex;flex-direction:column;gap:14px}
+.dots a{position:relative;width:10px;height:10px;border-radius:50%;border:1px solid rgba(148,163,184,.55);transition:.3s}
+.dots a:hover{border-color:var(--blue);transform:scale(1.3)}
+.dots a.active{background:var(--blue);border-color:var(--blue);box-shadow:0 0 12px var(--blue);transform:scale(1.35)}
+.dots a::after{content:attr(data-label);position:absolute;right:22px;top:50%;translate:6px -50%;padding:4px 10px;border-radius:6px;background:rgba(5,8,17,.9);border:1px solid var(--border);color:#e2e8f0;font-size:.72rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:.25s}
+.dots a:hover::after{opacity:1;translate:0 -50%}
+@media (max-width:1100px){.dots{display:none}}
+
+/* Scroll parallax (script.js sets --sy) */
+.orb-1{translate:0 calc(var(--sy,0) * .10px)}
+.orb-2{translate:0 calc(var(--sy,0) * -.08px)}
+.orb-3{translate:0 calc(var(--sy,0) * -.14px)}
+.hero-visual{translate:0 calc(var(--sy,0) * -.05px)}
+
+/* Hero entrance sequence */
+.hero-content>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-content>:nth-child(1){animation-delay:.15s}
+.hero-content>:nth-child(2){animation-delay:.3s}
+.hero-content>:nth-child(3){animation-delay:.45s}
+.hero-content>:nth-child(4){animation-delay:.6s}
+.hero-content>:nth-child(5){animation-delay:.75s}
+@keyframes rise{from{opacity:0;translate:0 34px}}
+.hero-visual{animation:visualIn 1.3s .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes visualIn{from{opacity:0;scale:.9}}
+
+/* Headline words slide up (script.js wraps the words) */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.08em 0;margin:-.08em 0}
+.w>span{display:inline-block;transform:translateY(115%);transition:transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0) * 70ms)}
+.reveal.visible .w>span,.contact-content.visible .w>span{transform:none}
+
+/* Cursor spotlight on cards */
+.mini-card,.step,.pj{position:relative}
+.service-card::after,.mini-card::after,.step::after,.pj::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(99,102,241,.16),transparent 45%);opacity:0;transition:opacity .35s;pointer-events:none}
+.service-card:hover::after,.mini-card:hover::after,.step:hover::after,.pj:hover::after{opacity:1}
+
+/* Process: line draws between steps */
+.step:not(:last-child)::before{content:"";position:absolute;top:45px;left:78px;right:-18px;height:2px;background:linear-gradient(90deg,var(--indigo),transparent);transform:scaleX(0);transform-origin:left;transition:transform 1s .5s ease;pointer-events:none}
+.step.visible:not(:last-child)::before{transform:scaleX(1)}
+.step-n{box-shadow:0 0 0 0 rgba(99,102,241,.5)}
+.step.visible .step-n{animation:ring 2.4s 1s ease-out 2}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(99,102,241,.55)}100%{box-shadow:0 0 0 16px rgba(99,102,241,0)}}
+@media (max-width:800px){.step:not(:last-child)::before{display:none}}
+
+/* Project images: unveil on scroll */
+.pj-img img{scale:1.18;transition:scale 1.4s cubic-bezier(.2,.8,.2,1),transform .5s}
+.pj.visible .pj-img img{scale:1}
+
+/* Contact glow breathes; ticker pauses on hover */
+.contact-background{animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{scale:1;opacity:.85}50%{scale:1.15;opacity:1}}
+.ticker:hover .ticker-track{animation-play-state:paused}
+
+@media (prefers-reduced-motion:reduce){
+  .w>span{transform:none}
+  .hero-content>*,.hero-visual,body{animation:none}
+  .orb-1,.orb-2,.orb-3,.hero-visual{translate:none}
+}
