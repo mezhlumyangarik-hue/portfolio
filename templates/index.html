@@ -4,6 +4,9 @@
   'desc': 'Արագ և հեռախոսի համար հարմար կայքեր հյուրատների, ռեստորանների և խանութների համար՝ հայերեն, ռուսերեն և անգլերեն։',
   'nav': ['Ծառայություններ', 'Ինչպես եմ աշխատում', 'Նախագծեր', 'Հարցեր', 'Կապ'],
   'cta': 'Գրել ինձ',
+  'tk': ['Հյուրատներ','Ռեստորաններ','Խանութներ','3 լեզու','Արագ կայքեր','SEO'],
+  'wy_t': 'Ինչ կստանաք',
+  'wy': [['fa-bolt','Արագ կայք','Էջը արագ է բացվում՝ նաև հեռախոսի վրա'],['fa-mobile-screen','Հեռախոսի համար','Հարմար է ցանկացած էկրանի վրա'],['fa-language','3 լեզու','Հայերեն, ռուսերեն, անգլերեն'],['fa-magnifying-glass','Google-ում','Վերնագրեր և նկարագրություններ որոնման համար']],
   'badge': 'Ընդունում եմ նոր պատվերներ',
   'h1a': 'Կայք, որը բերում է', 'h1b': 'հաճախորդներ ձեր բիզնեսին',
   'lead': 'Պատրաստում եմ արագ և հեռախոսի համար հարմար կայքեր հյուրատների, ռեստորանների և խանութների համար՝ հայերեն, ռուսերեն և անգլերեն։',
@@ -33,6 +36,9 @@
   'desc': 'Быстрые сайты для гостевых домов, ресторанов и магазинов на армянском, русском и английском языках.',
   'nav': ['Услуги', 'Как я работаю', 'Проекты', 'Вопросы', 'Контакты'],
   'cta': 'Написать мне',
+  'tk': ['Гостевые дома','Рестораны','Магазины','3 языка','Быстрые сайты','SEO'],
+  'wy_t': 'Что вы получите',
+  'wy': [['fa-bolt','Быстрый сайт','Страница быстро открывается, в том числе на телефоне'],['fa-mobile-screen','Для телефона','Удобно на любом экране'],['fa-language','3 языка','Армянский, русский, английский'],['fa-magnifying-glass','В Google','Заголовки и описания для поиска']],
   'badge': 'Принимаю новые заказы',
   'h1a': 'Сайт, который приводит', 'h1b': 'клиентов вашему бизнесу',
   'lead': 'Делаю быстрые сайты, удобные на телефоне, для гостевых домов, ресторанов и магазинов на армянском, русском и английском.',
@@ -62,6 +68,9 @@
   'desc': 'Fast, mobile-friendly websites for guesthouses, restaurants and shops in Armenian, Russian and English.',
   'nav': ['Services', 'How I work', 'Projects', 'FAQ', 'Contact'],
   'cta': 'Message me',
+  'tk': ['Guesthouses','Restaurants','Shops','3 languages','Fast sites','SEO'],
+  'wy_t': 'What you get',
+  'wy': [['fa-bolt','Fast site','Pages open quickly, including on phones'],['fa-mobile-screen','Built for phones','Comfortable on any screen'],['fa-language','3 languages','Armenian, Russian, English'],['fa-magnifying-glass','Found on Google','Titles and descriptions for search']],
   'badge': 'Taking new projects',
   'h1a': 'A website that brings', 'h1b': 'customers to your business',
   'lead': 'I build fast, mobile-friendly websites for guesthouses, restaurants and shops in Armenian, Russian and English.',
@@ -107,6 +116,8 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+<div class="background-orb orb-1"></div><div class="background-orb orb-2"></div><div class="background-orb orb-3"></div><div class="grid-background"></div>
+<div class="cursor-dot"></div><div class="cursor-ring"></div>
 
 <header class="site-header" id="siteHeader">
 <nav class="navbar">
@@ -134,7 +145,7 @@
 
 <section class="hero" id="home">
   <div class="hero-container">
-    <div class="hero-content">
+    <div class="hero-content reveal">
       <div class="availability"><span class="availability-dot"></span><span>{{ L.badge }}</span></div>
       <h1><span class="hero-line">{{ L.h1a }}</span><span class="hero-gradient">{{ L.h1b }}</span></h1>
       <p class="hero-description">{{ L.lead }}</p>
@@ -144,14 +155,45 @@
       </div>
       <div class="chips">{% for c in L.chips %}<span>{{ c }}</span>{% endfor %}</div>
     </div>
+    <div class="hero-visual reveal-right">
+      <div class="visual-glow"></div>
+      <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+      <div class="laptop"><div class="laptop-screen">
+        <div class="screen-top"><div class="window-dots"><span></span><span></span><span></span></div><div class="screen-url">mezhlumyan.dev</div></div>
+        <div class="code-area"><div class="code-sidebar"><div></div><div></div><div></div><div></div><div></div></div>
+          <div class="code-content">
+            <span class="code-comment">&lt;!-- hotel --&gt;</span>
+            <span><b>&lt;section</b> class="hero"<b>&gt;</b></span>
+            <span class="indent"><b>&lt;h1&gt;</b> Hotel <b>&lt;/h1&gt;</b></span>
+            <span class="indent"><b>&lt;a</b> href="wa.me"<b>&gt;</b></span>
+            <span><b>&lt;/section&gt;</b></span>
+            <div class="code-line"></div><div class="code-line short"></div><div class="code-line medium"></div>
+          </div></div>
+        <div class="preview-window"><div class="preview-title">{{ L.h1b }}</div><div class="preview-text">{{ L.chips[0] }}. {{ L.chips[1] }}.</div><div class="preview-button">{{ L.cta }}</div></div>
+      </div>
+      <div class="laptop-base"><div class="laptop-keyboard"></div></div></div>
+      <div class="tech-card tech-html"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+      <div class="tech-card tech-css"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="tech-card tech-js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-card tech-python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="floating-code">&lt;/&gt;</div><div class="floating-bracket">{ }</div>
+    </div>
   </div>
 </section>
 
+<section class="ticker"><div class="ticker-track">{% for i in range(2) %}{% for w in L.tk %}<span>{{ w }}</span><i>✦</i>{% endfor %}{% endfor %}</div></section>
+
+<section class="section">
+  <div class="section-heading reveal"><h2>{{ L.wy_t }}</h2></div>
+  <div class="about-cards why">{% for w in L.wy %}<div class="mini-card reveal"><i class="fa-solid {{ w[0] }}"></i><div><strong>{{ w[1] }}</strong><span>{{ w[2] }}</span></div></div>{% endfor %}</div>
+</section>
+
+
 <section id="services" class="section services-section">
-  <div class="section-heading"><h2>{{ L.sv_t }}</h2></div>
+  <div class="section-heading reveal"><h2>{{ L.sv_t }}</h2></div>
   <div class="services-grid">
     {% for s in L.sv %}
-    <article class="service-card">
+    <article class="service-card reveal">
       <div class="service-icon"><i class="fa-solid {{ s[0] }}"></i></div>
       <h3>{{ s[1] }}</h3>
       <p>{{ s[2] }}</p>
@@ -162,19 +204,19 @@
 </section>
 
 <section id="process" class="section">
-  <div class="section-heading"><h2>{{ L.st_t }}</h2></div>
+  <div class="section-heading reveal"><h2>{{ L.st_t }}</h2></div>
   <ol class="steps">
     {% for s in L.st %}
-    <li class="step"><span class="step-n">{{ loop.index }}</span><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></li>
+    <li class="step reveal"><span class="step-n">{{ loop.index }}</span><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></li>
     {% endfor %}
   </ol>
 </section>
 
 <section id="projects" class="section projects-section">
-  <div class="section-heading"><h2>{{ L.pj_t }}</h2></div>
+  <div class="section-heading reveal"><h2>{{ L.pj_t }}</h2></div>
   <div class="pj-grid">
     {% for p in projects %}
-    <article class="pj">
+    <article class="pj reveal">
       <a class="pj-img" href="{{ p.live_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.title }}">
         {% if p.preview_url %}<img src="{{ p.preview_url }}" alt="{{ p.title }}" loading="lazy" width="640" height="400" onerror="this.remove()">{% endif %}
       </a>
@@ -193,17 +235,17 @@
 </section>
 
 <section id="faq" class="section">
-  <div class="section-heading"><h2>{{ L.fq_t }}</h2></div>
+  <div class="section-heading reveal"><h2>{{ L.fq_t }}</h2></div>
   <div class="faq">
     {% for q in L.fq %}
-    <details><summary>{{ q[0] }}</summary><p>{{ q[1] }}</p></details>
+    <details class="reveal"><summary>{{ q[0] }}</summary><p>{{ q[1] }}</p></details>
     {% endfor %}
   </div>
 </section>
 
 <section id="contact" class="contact-section">
   <div class="contact-background"></div>
-  <div class="contact-content">
+  <div class="contact-content reveal">
     <h2>{{ L.ct_t }}</h2>
     <p>{{ L.ct_d }}</p>
     <div class="contact-buttons">
