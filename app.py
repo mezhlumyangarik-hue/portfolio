@@ -133,14 +133,7 @@ PROJECTS_DATA = {
             'github_url': 'https://github.com/mezhlumyangarik-hue',
             
         },
-        {
-            'title': 'Kars Legacy',
-            'description': 'Դռների վաճառքի ժամանակակից կայք՝ ապրանքների ներկայացմամբ, գնով և կապի/պատվերի հնարավորությամբ:',
-            'tags': ['Business', 'JavaScript', 'Responsive', 'UI/UX'],
-            'live_url': 'https://kars-legacy.onrender.com/',
-            'github_url': 'https://github.com/mezhlumyangarik-hue',
-          
-        },
+        
         {
             'title': 'Royal Ararat Restaurant',
             'description': 'Պրեմիում ռեստորանի կայք՝ մենյուով, ուտեստների քարտերով, զամբյուղով և օնլայն պատվերի համակարգով:',
