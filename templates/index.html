@@ -116,6 +116,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <div class="background-orb orb-1"></div><div class="background-orb orb-2"></div><div class="background-orb orb-3"></div><div class="grid-background"></div>
 <div class="cursor-dot"></div><div class="cursor-ring"></div>
 
@@ -145,7 +146,7 @@
 
 <section class="hero" id="home">
   <div class="hero-container">
-    <div class="hero-content reveal">
+    <div class="hero-content">
       <div class="availability"><span class="availability-dot"></span><span>{{ L.badge }}</span></div>
       <h1><span class="hero-line">{{ L.h1a }}</span><span class="hero-gradient">{{ L.h1b }}</span></h1>
       <p class="hero-description">{{ L.lead }}</p>
@@ -155,7 +156,7 @@
       </div>
       <div class="chips">{% for c in L.chips %}<span>{{ c }}</span>{% endfor %}</div>
     </div>
-    <div class="hero-visual reveal-right">
+    <div class="hero-visual">
       <div class="visual-glow"></div>
       <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
       <div class="laptop"><div class="laptop-screen">
@@ -271,6 +272,15 @@
     <a href="#home" class="back-top" aria-label="Top"><i class="fa-solid fa-arrow-up"></i></a>
   </div>
 </footer>
+
+<nav class="dots" aria-label="Sections">
+  <a href="#home" data-label="Home" aria-label="Home"></a>
+  <a href="#services" data-label="{{ L.nav[0] }}" aria-label="{{ L.nav[0] }}"></a>
+  <a href="#process" data-label="{{ L.nav[1] }}" aria-label="{{ L.nav[1] }}"></a>
+  <a href="#projects" data-label="{{ L.nav[2] }}" aria-label="{{ L.nav[2] }}"></a>
+  <a href="#faq" data-label="{{ L.nav[3] }}" aria-label="{{ L.nav[3] }}"></a>
+  <a href="#contact" data-label="{{ L.nav[4] }}" aria-label="{{ L.nav[4] }}"></a>
+</nav>
 
 <a href="tel:+37496787855" class="floating-call-btn" aria-label="Call"><span class="call-pulse"></span><i class="fa-solid fa-phone"></i></a>
 
