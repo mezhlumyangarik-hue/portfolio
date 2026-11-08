@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ---------- Active navigation link ---------- */
 
     const sections = document.querySelectorAll("section[id]");
-    const navItems = document.querySelectorAll(".nav-link");
+    const navItems = document.querySelectorAll(".nav-link, .dots a");
 
     const updateActiveNav = () => {
 
@@ -213,6 +213,72 @@ document.addEventListener("DOMContentLoaded", () => {
             target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
         });
     });
+
+
+    /* ---------- Scroll progress bar + parallax variable ---------- */
+
+    const progress = document.getElementById("progress");
+    const root = document.documentElement;
+    let ticking = false;
+
+    const frame = () => {
+        const y = window.scrollY;
+        const max = root.scrollHeight - window.innerHeight;
+        if (progress) progress.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
+        if (!reduceMotion) root.style.setProperty("--sy", y);
+        ticking = false;
+    };
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(frame);
+        }
+    }, { passive: true });
+
+    frame();
+
+
+    /* ---------- Split big headings into sliding words ---------- */
+
+    document.querySelectorAll(".section-heading h2, .contact-content h2").forEach(h => {
+
+        const words = h.textContent.trim().split(/\s+/);
+        h.setAttribute("aria-label", h.textContent.trim());
+        h.innerHTML = words
+            .map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${w}</span></span>`)
+            .join(" ");
+    });
+
+
+    /* ---------- Magnetic buttons (mouse devices only) ---------- */
+
+    if (fine && !reduceMotion) {
+
+        document.querySelectorAll(".main-btn, .outline-btn, .header-cta, .contact-main-btn, .contact-outline-btn").forEach(btn => {
+
+            btn.addEventListener("mousemove", e => {
+                const r = btn.getBoundingClientRect();
+                const x = (e.clientX - r.left - r.width / 2) * 0.18;
+                const y = (e.clientY - r.top - r.height / 2) * 0.28;
+                btn.style.translate = `${x}px ${y}px`;
+            });
+
+            btn.addEventListener("mouseleave", () => { btn.style.translate = ""; });
+        });
+
+
+        /* ---------- Spotlight follows the cursor inside cards ---------- */
+
+        document.querySelectorAll(".service-card, .mini-card, .step, .pj").forEach(card => {
+
+            card.addEventListener("mousemove", e => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+                card.style.setProperty("--my", `${e.clientY - r.top}px`);
+            });
+        });
+    }
 
 
     /* ---------- Page loaded ---------- */
