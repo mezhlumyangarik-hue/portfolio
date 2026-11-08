@@ -1,1072 +1,237 @@
+{% set D = {
+ 'hy': {
+  'title': 'Գարիկ Մեժլումյան | Կայքերի պատրաստում Սյունիքում',
+  'desc': 'Արագ և հեռախոսի համար հարմար կայքեր հյուրատների, ռեստորանների և խանութների համար՝ հայերեն, ռուսերեն և անգլերեն։',
+  'nav': ['Ծառայություններ', 'Ինչպես եմ աշխատում', 'Նախագծեր', 'Հարցեր', 'Կապ'],
+  'cta': 'Գրել ինձ',
+  'badge': 'Ընդունում եմ նոր պատվերներ',
+  'h1a': 'Կայք, որը բերում է', 'h1b': 'հաճախորդներ ձեր բիզնեսին',
+  'lead': 'Պատրաստում եմ արագ և հեռախոսի համար հարմար կայքեր հյուրատների, ռեստորանների և խանութների համար՝ հայերեն, ռուսերեն և անգլերեն։',
+  'b1': 'Տեսնել նախագծերը', 'b2': 'Գրել WhatsApp-ով',
+  'chips': ['3 լեզու', 'Հարմար է հեռախոսի համար', 'Google-ում գտնվելու հիմքեր'],
+  'sv_t': 'Ինչ եմ պատրաստում', 'sv_from': 'Սկսած', 'price': 'XX XXX ֏',
+  'sv': [
+   ['fa-hotel', 'Հյուրատների և ռեստորանների կայք', 'Սենյակներ կամ մենյու, լուսանկարներ և հարմար կապ, որ հյուրն ուղիղ գրի ձեզ։'],
+   ['fa-cart-shopping', 'Օնլայն խանութ', 'Ապրանքների կատալոգ, զամբյուղ և պատվերների ընդունում։'],
+   ['fa-laptop-code', 'Բիզնես վիզիտկա', 'Մեկ էջանոց կայք՝ ծառայություններ, նկարներ, կոնտակտներ և քարտեզ։']],
+  'st_t': 'Ինչպես եմ աշխատում',
+  'st': [
+   ['Զրույց', 'Պարզում ենք, ինչ է պետք ձեր բիզնեսին և ինչ ենք դնելու կայքում։'],
+   ['Դեմո', 'Ցույց եմ տալիս կայքի նախնական տարբերակը, և դուք ասում եք՝ ինչ փոխել։'],
+   ['Գործարկում', 'Կայքը դնում ենք համացանցում։ Փոփոխությունների համար մնում եմ կապի մեջ։']],
+  'pj_t': 'Իմ նախագծերը', 'live': 'Բացել կայքը',
+  'fq_t': 'Հաճախակի հարցեր',
+  'fq': [
+   ['Որքա՞ն արժե կայքը', 'Գինը կախված է էջերի քանակից և գործառույթներից։ Գրեք, ասեք ինչ եք ուզում, և ես կասեմ ճշգրիտ գինը։'],
+   ['Որքա՞ն ժամանակ է տևում', 'Ժամկետը պայմանավորվում ենք սկզբում՝ կախված ծավալից։'],
+   ['Կարո՞ղ եմ հետո փոխել տեքստերը կամ գները', 'Այո։ Փոփոխությունները կարող եմ անել ես, կամ պայմանավորվենք ամսական սպասարկման մասին։'],
+   ['Կայքը կլինի՞ երեք լեզվով', 'Այո, հայերեն, ռուսերեն և անգլերեն։ Կարող ենք սկսել մեկ լեզվով և ավելացնել մյուսները։']],
+  'ct_t': 'Քննարկենք ձեր կայքը', 'ct_d': 'Գրեք կամ զանգահարեք։ Կպատասխանեմ նույն օրը։',
+  'call': 'Զանգահարել', 'mail': 'Էլ. փոստ'},
+ 'ru': {
+  'title': 'Гарик Межлумян | Создание сайтов в Сюнике',
+  'desc': 'Быстрые сайты для гостевых домов, ресторанов и магазинов на армянском, русском и английском языках.',
+  'nav': ['Услуги', 'Как я работаю', 'Проекты', 'Вопросы', 'Контакты'],
+  'cta': 'Написать мне',
+  'badge': 'Принимаю новые заказы',
+  'h1a': 'Сайт, который приводит', 'h1b': 'клиентов вашему бизнесу',
+  'lead': 'Делаю быстрые сайты, удобные на телефоне, для гостевых домов, ресторанов и магазинов на армянском, русском и английском.',
+  'b1': 'Смотреть проекты', 'b2': 'Написать в WhatsApp',
+  'chips': ['3 языка', 'Удобно на телефоне', 'Основы SEO для Google'],
+  'sv_t': 'Что я делаю', 'sv_from': 'От', 'price': 'XX XXX ֏',
+  'sv': [
+   ['fa-hotel', 'Сайт для гостевого дома или ресторана', 'Номера или меню, фото и удобная связь, чтобы гость писал вам напрямую.'],
+   ['fa-cart-shopping', 'Интернет-магазин', 'Каталог товаров, корзина и приём заказов.'],
+   ['fa-laptop-code', 'Сайт-визитка', 'Одна страница: услуги, фото, контакты и карта.']],
+  'st_t': 'Как я работаю',
+  'st': [
+   ['Разговор', 'Выясняем, что нужно вашему бизнесу и что разместить на сайте.'],
+   ['Демо', 'Показываю первую версию сайта, вы говорите, что изменить.'],
+   ['Запуск', 'Публикуем сайт. После этого остаюсь на связи по правкам.']],
+  'pj_t': 'Мои проекты', 'live': 'Открыть сайт',
+  'fq_t': 'Частые вопросы',
+  'fq': [
+   ['Сколько стоит сайт?', 'Цена зависит от количества страниц и функций. Напишите, что нужно, и я назову точную цену.'],
+   ['Сколько времени занимает работа?', 'Срок обсуждаем в начале, он зависит от объёма.'],
+   ['Можно ли потом менять тексты и цены?', 'Да. Правки могу вносить я, или договоримся о ежемесячном обслуживании.'],
+   ['Сайт будет на трёх языках?', 'Да: армянский, русский и английский. Можно начать с одного и добавить остальные.']],
+  'ct_t': 'Обсудим ваш сайт', 'ct_d': 'Напишите или позвоните. Отвечу в тот же день.',
+  'call': 'Позвонить', 'mail': 'Эл. почта'},
+ 'en': {
+  'title': 'Garik Mezhlumyan | Websites for Syunik businesses',
+  'desc': 'Fast, mobile-friendly websites for guesthouses, restaurants and shops in Armenian, Russian and English.',
+  'nav': ['Services', 'How I work', 'Projects', 'FAQ', 'Contact'],
+  'cta': 'Message me',
+  'badge': 'Taking new projects',
+  'h1a': 'A website that brings', 'h1b': 'customers to your business',
+  'lead': 'I build fast, mobile-friendly websites for guesthouses, restaurants and shops in Armenian, Russian and English.',
+  'b1': 'See projects', 'b2': 'Message on WhatsApp',
+  'chips': ['3 languages', 'Works well on phones', 'SEO basics for Google'],
+  'sv_t': 'What I build', 'sv_from': 'From', 'price': 'XX XXX ֏',
+  'sv': [
+   ['fa-hotel', 'Guesthouse or restaurant website', 'Rooms or menu, photos and easy contact so guests can reach you directly.'],
+   ['fa-cart-shopping', 'Online shop', 'Product catalog, cart and order handling.'],
+   ['fa-laptop-code', 'Business card site', 'One page with services, photos, contacts and a map.']],
+  'st_t': 'How I work',
+  'st': [
+   ['Talk', 'We work out what your business needs and what goes on the site.'],
+   ['Demo', 'I show you a first version and you tell me what to change.'],
+   ['Launch', 'We put the site online. I stay available for changes afterwards.']],
+  'pj_t': 'My projects', 'live': 'Open site',
+  'fq_t': 'Frequently asked questions',
+  'fq': [
+   ['How much does a website cost?', 'It depends on the number of pages and features. Tell me what you need and I will give you an exact price.'],
+   ['How long does it take?', 'We agree on the timeline at the start, based on the size of the project.'],
+   ['Can I change texts or prices later?', 'Yes. I can make changes for you, or we can agree on monthly maintenance.'],
+   ['Will the site be in three languages?', 'Yes: Armenian, Russian and English. We can start with one and add the others.']],
+  'ct_t': 'Let’s talk about your website', 'ct_d': 'Write or call. I reply the same day.',
+  'call': 'Call', 'mail': 'Email'}
+} %}
+{% set L = D.get(current_lang) or D['hy'] %}
 <!DOCTYPE html>
 <html lang="{{ current_lang }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Garik Mezhlumyan | Web Developer</title>
-
-    <meta name="description"
-          content="Garik Mezhlumyan — Web Developer creating modern, fast and interactive websites.">
-
-    <link rel="icon" type="image/svg+xml"
-          href="data:image/svg+xml;utf8,
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <circle cx='256' cy='256' r='230' fill='%23060910' stroke='%236366f1' stroke-width='24'/>
-          <path d='M190 320 L126 256 L190 192 M322 192 L386 256 L322 320 M280 150 L232 362'
-          fill='none' stroke='%2338bdf8' stroke-width='36'
-          stroke-linecap='round' stroke-linejoin='round'/>
-          </svg>">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ L.title }}</title>
+<meta name="description" content="{{ L.desc }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ L.title }}">
+<meta property="og:description" content="{{ L.desc }}">
+<meta name="theme-color" content="#050811">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='230' fill='%23060910' stroke='%236366f1' stroke-width='24'/%3E%3Cpath d='M190 320 126 256 190 192M322 192 386 256 322 320M280 150 232 362' fill='none' stroke='%2338bdf8' stroke-width='36' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
 
-<!-- =========================================================
-     BACKGROUND
-========================================================= -->
-
-<div class="noise"></div>
-
-<div class="background-orb orb-1"></div>
-<div class="background-orb orb-2"></div>
-<div class="background-orb orb-3"></div>
-
-<div class="grid-background"></div>
-
-
-<!-- =========================================================
-     CUSTOM CURSOR
-========================================================= -->
-
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
 <header class="site-header" id="siteHeader">
-
-    <nav class="navbar">
-
-        <a href="?lang={{ current_lang }}" class="logo">
-
-            <span class="logo-symbol">&lt;/&gt;</span>
-
-            <span>
-                mezhlumyan<span class="logo-dot">.</span>dev
-            </span>
-
-        </a>
-
-
-        <div class="nav-links" id="navLinks">
-
-            <a href="#about" class="nav-link">
-                {{ t.nav_about }}
-            </a>
-
-            <a href="#services" class="nav-link">
-                {{ t.nav_services }}
-            </a>
-
-            <a href="#projects" class="nav-link">
-                {{ t.nav_projects }}
-            </a>
-
-            <a href="#contact" class="nav-link">
-                {{ t.nav_contact }}
-            </a>
-
-        </div>
-
-
-        <div class="nav-actions">
-
-            <div class="lang-switch">
-
-                <a href="?lang=hy"
-                   class="{% if current_lang == 'hy' %}active{% endif %}">
-                    AM
-                </a>
-
-                <a href="?lang=ru"
-                   class="{% if current_lang == 'ru' %}active{% endif %}">
-                    RU
-                </a>
-
-                <a href="?lang=en"
-                   class="{% if current_lang == 'en' %}active{% endif %}">
-                    EN
-                </a>
-
-            </div>
-
-
-            <a href="tel:+37496787855"
-               class="header-cta">
-
-                {{ t.nav_cta }}
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-
-            <button class="menu-btn"
-                    id="menuBtn"
-                    aria-label="Menu">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
-    </nav>
-
+<nav class="navbar">
+  <a href="?lang={{ current_lang }}" class="logo"><span class="logo-symbol">&lt;/&gt;</span><span>mezhlumyan<span class="logo-dot">.</span>dev</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#services" class="nav-link">{{ L.nav[0] }}</a>
+    <a href="#process" class="nav-link">{{ L.nav[1] }}</a>
+    <a href="#projects" class="nav-link">{{ L.nav[2] }}</a>
+    <a href="#faq" class="nav-link">{{ L.nav[3] }}</a>
+    <a href="#contact" class="nav-link">{{ L.nav[4] }}</a>
+  </div>
+  <div class="nav-actions">
+    <div class="lang-switch">
+      <a href="?lang=hy" class="{% if current_lang == 'hy' %}active{% endif %}">AM</a>
+      <a href="?lang=ru" class="{% if current_lang == 'ru' %}active{% endif %}">RU</a>
+      <a href="?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">EN</a>
+    </div>
+    <a href="#contact" class="header-cta">{{ L.cta }}</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 </header>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
 
 <main>
 
 <section class="hero" id="home">
-
-    <div class="hero-container">
-
-
-        <!-- LEFT -->
-
-        <div class="hero-content reveal">
-
-            <div class="availability">
-
-                <span class="availability-dot"></span>
-
-                <span>{{ t.hero_badge }}</span>
-
-            </div>
-
-
-            <div class="hero-small-title">
-
-                WEB DEVELOPER
-
-                <span></span>
-
-                2026
-
-            </div>
-
-
-            <h1>
-
-                <span class="hero-line">
-                    {{ t.hero_title_1 }}
-                </span>
-
-                <span class="hero-gradient">
-                    {{ t.hero_title_2 }}
-                </span>
-
-            </h1>
-
-
-            <p class="hero-description">
-
-                {{ t.hero_desc }}
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#projects"
-                   class="main-btn">
-
-                    <span>{{ t.hero_btn_secondary }}</span>
-
-                    <i class="fa-solid fa-arrow-down"></i>
-
-                </a>
-
-
-                <a href="#contact"
-                   class="outline-btn">
-
-                    <span>{{ t.hero_btn_primary }}</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-stats">
-
-                <div class="stat">
-
-                    <strong>05+</strong>
-
-                    <span>Projects</span>
-
-                </div>
-
-                <div class="stat">
-
-                    <strong>03</strong>
-
-                    <span>Languages</span>
-
-                </div>
-
-                <div class="stat">
-
-                    <strong>100%</strong>
-
-                    <span>Responsive</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- RIGHT VISUAL -->
-
-        <div class="hero-visual reveal-right">
-
-
-            <div class="visual-glow"></div>
-
-
-            <!-- Orbit -->
-
-            <div class="orbit orbit-1"></div>
-            <div class="orbit orbit-2"></div>
-            <div class="orbit orbit-3"></div>
-
-
-            <!-- Laptop -->
-
-            <div class="laptop">
-
-                <div class="laptop-screen">
-
-                    <div class="screen-top">
-
-                        <div class="window-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="screen-url">
-                            mezhlumyan.dev
-                        </div>
-
-                    </div>
-
-
-                    <div class="code-area">
-
-                        <div class="code-sidebar">
-
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-
-                        </div>
-
-
-                        <div class="code-content">
-
-                            <span class="code-comment">
-                                &lt;!-- digital experience --&gt;
-                            </span>
-
-                            <span>
-                                <b>&lt;section</b>
-                                class="hero"
-                                <b>&gt;</b>
-                            </span>
-
-                            <span class="indent">
-                                <b>&lt;h1&gt;</b>
-                                Build Something
-                                <b>&lt;/h1&gt;</b>
-                            </span>
-
-                            <span class="indent">
-                                <b>&lt;p&gt;</b>
-                                Modern Web Experience
-                                <b>&lt;/p&gt;</b>
-                            </span>
-
-                            <span class="indent">
-                                <b>&lt;button&gt;</b>
-                                Explore
-                                <b>&lt;/button&gt;</b>
-                            </span>
-
-                            <span>
-                                <b>&lt;/section&gt;</b>
-                            </span>
-
-                            <div class="code-line"></div>
-                            <div class="code-line short"></div>
-                            <div class="code-line medium"></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="preview-window">
-
-                        <div class="preview-title">
-                            Better Digital Experiences
-                        </div>
-
-                        <div class="preview-text">
-                            Modern websites.
-                            Clean code.
-                            Real results.
-                        </div>
-
-                        <div class="preview-button">
-                            Explore
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="laptop-base">
-
-                    <div class="laptop-keyboard"></div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Floating Technology Cards -->
-
-            <div class="tech-card tech-html">
-
-                <i class="fa-brands fa-html5"></i>
-
-                <span>HTML5</span>
-
-            </div>
-
-
-            <div class="tech-card tech-css">
-
-                <i class="fa-brands fa-css3-alt"></i>
-
-                <span>CSS3</span>
-
-            </div>
-
-
-            <div class="tech-card tech-js">
-
-                <i class="fa-brands fa-js"></i>
-
-                <span>JavaScript</span>
-
-            </div>
-
-
-            <div class="tech-card tech-python">
-
-                <i class="fa-brands fa-python"></i>
-
-                <span>Python</span>
-
-            </div>
-
-
-            <div class="tech-card tech-react">
-
-                <i class="fa-brands fa-react"></i>
-
-                <span>React</span>
-
-            </div>
-
-
-            <div class="floating-code">
-                &lt;/&gt;
-            </div>
-
-            <div class="floating-bracket">
-                { }
-            </div>
-
-        </div>
-
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="availability"><span class="availability-dot"></span><span>{{ L.badge }}</span></div>
+      <h1><span class="hero-line">{{ L.h1a }}</span><span class="hero-gradient">{{ L.h1b }}</span></h1>
+      <p class="hero-description">{{ L.lead }}</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="main-btn"><span>{{ L.b1 }}</span></a>
+        <a href="https://wa.me/37496787855" target="_blank" rel="noopener noreferrer" class="outline-btn"><i class="fa-brands fa-whatsapp"></i><span>{{ L.b2 }}</span></a>
+      </div>
+      <div class="chips">{% for c in L.chips %}<span>{{ c }}</span>{% endfor %}</div>
     </div>
-
-
-    <!-- SCROLL -->
-
-    <a href="#about" class="scroll-indicator">
-
-        <span>SCROLL TO EXPLORE</span>
-
-        <i class="fa-solid fa-arrow-down"></i>
-
-    </a>
-
+  </div>
 </section>
-
-
-<!-- =========================================================
-     MOVING TICKER
-========================================================= -->
-
-<section class="ticker">
-
-    <div class="ticker-track">
-
-        <span>CODE</span>
-        <i>✦</i>
-
-        <span>DESIGN</span>
-        <i>✦</i>
-
-        <span>MOTION</span>
-        <i>✦</i>
-
-        <span>EXPERIENCE</span>
-        <i>✦</i>
-
-        <span>CODE</span>
-        <i>✦</i>
-
-        <span>DESIGN</span>
-        <i>✦</i>
-
-        <span>MOTION</span>
-        <i>✦</i>
-
-        <span>EXPERIENCE</span>
-        <i>✦</i>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section id="about" class="section about-section">
-
-    <div class="section-heading reveal">
-
-        <span class="section-label">
-            {{ t.about_sub }}
-        </span>
-
-        <h2>
-            {{ t.about_title }}
-        </h2>
-
-    </div>
-
-
-    <div class="about-grid">
-
-
-        <div class="about-main reveal-left">
-
-            <div class="about-number">
-                01
-            </div>
-
-            <h3>
-                I build digital experiences
-                <span>that matter.</span>
-            </h3>
-
-            <p>
-                {{ t.about_text }}
-            </p>
-
-
-            <div class="about-line"></div>
-
-
-            <div class="about-bottom">
-
-                <span>Based in Armenia</span>
-
-                <span>Available for projects</span>
-
-            </div>
-
-        </div>
-
-
-        <div class="about-cards reveal-right">
-
-            <div class="mini-card">
-
-                <i class="fa-solid fa-bolt"></i>
-
-                <div>
-                    <strong>Fast</strong>
-                    <span>Performance focused</span>
-                </div>
-
-            </div>
-
-
-            <div class="mini-card">
-
-                <i class="fa-solid fa-mobile-screen"></i>
-
-                <div>
-                    <strong>Responsive</strong>
-                    <span>Every screen matters</span>
-                </div>
-
-            </div>
-
-
-            <div class="mini-card">
-
-                <i class="fa-solid fa-code"></i>
-
-                <div>
-                    <strong>Clean Code</strong>
-                    <span>Structured & scalable</span>
-                </div>
-
-            </div>
-
-
-            <div class="mini-card">
-
-                <i class="fa-solid fa-rocket"></i>
-
-                <div>
-                    <strong>Modern</strong>
-                    <span>Built for 2026</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SERVICES
-========================================================= -->
 
 <section id="services" class="section services-section">
-
-    <div class="section-heading reveal">
-
-        <span class="section-label">
-            {{ t.services_sub }}
-        </span>
-
-        <h2>
-            {{ t.services_title }}
-        </h2>
-
-    </div>
-
-
-    <div class="services-grid">
-
-
-        <article class="service-card reveal">
-
-            <div class="service-number">
-                01
-            </div>
-
-            <div class="service-icon">
-                <i class="fa-solid fa-hotel"></i>
-            </div>
-
-            <h3>
-                {{ t.srv1_title }}
-            </h3>
-
-            <p>
-                {{ t.srv1_desc }}
-            </p>
-
-            <div class="service-arrow">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-        </article>
-
-
-        <article class="service-card reveal">
-
-            <div class="service-number">
-                02
-            </div>
-
-            <div class="service-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-
-            <h3>
-                {{ t.srv2_title }}
-            </h3>
-
-            <p>
-                {{ t.srv2_desc }}
-            </p>
-
-            <div class="service-arrow">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-        </article>
-
-
-        <article class="service-card reveal">
-
-            <div class="service-number">
-                03
-            </div>
-
-            <div class="service-icon">
-                <i class="fa-solid fa-laptop-code"></i>
-            </div>
-
-            <h3>
-                {{ t.srv3_title }}
-            </h3>
-
-            <p>
-                {{ t.srv3_desc }}
-            </p>
-
-            <div class="service-arrow">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-
-        </article>
-
-
-    </div>
-
+  <div class="section-heading"><h2>{{ L.sv_t }}</h2></div>
+  <div class="services-grid">
+    {% for s in L.sv %}
+    <article class="service-card">
+      <div class="service-icon"><i class="fa-solid {{ s[0] }}"></i></div>
+      <h3>{{ s[1] }}</h3>
+      <p>{{ s[2] }}</p>
+      <p class="price">{{ L.sv_from }} <strong>{{ L.price }}</strong></p>
+    </article>
+    {% endfor %}
+  </div>
 </section>
 
-
-<!-- =========================================================
-     PROJECTS
-========================================================= -->
+<section id="process" class="section">
+  <div class="section-heading"><h2>{{ L.st_t }}</h2></div>
+  <ol class="steps">
+    {% for s in L.st %}
+    <li class="step"><span class="step-n">{{ loop.index }}</span><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></li>
+    {% endfor %}
+  </ol>
+</section>
 
 <section id="projects" class="section projects-section">
-
-    <div class="section-heading projects-heading reveal">
-
-        <div>
-
-            <span class="section-label">
-                {{ t.projects_sub }}
-            </span>
-
-            <h2>
-                {{ t.projects_title }}
-            </h2>
-
+  <div class="section-heading"><h2>{{ L.pj_t }}</h2></div>
+  <div class="pj-grid">
+    {% for p in projects %}
+    <article class="pj">
+      <a class="pj-img" href="{{ p.live_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.title }}">
+        {% if p.preview_url %}<img src="{{ p.preview_url }}" alt="{{ p.title }}" loading="lazy" width="640" height="400" onerror="this.remove()">{% endif %}
+      </a>
+      <div class="pj-body">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+        <div class="project-tags">{% for tag in p.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+        <div class="pj-links">
+          <a href="{{ p.live_url }}" target="_blank" rel="noopener noreferrer">{{ L.live }}</a>
+          <a href="{{ p.github_url }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
-
-        <div class="projects-counter">
-            06 / WORKS
-        </div>
-
-    </div>
-
-
-    <div class="projects-grid">
-
-        {% for project in projects %}
-
-        <article class="project-card reveal">
-
-            <div class="project-visual">
-
-                <div class="project-browser">
-
-                    <div class="browser-top">
-
-                        <div class="browser-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="browser-url">
-                            {{ project.title }}
-                        </div>
-
-                    </div>
-
-
-                    <div class="project-preview project-preview-live">
-
-                        {% if project.preview_url %}
-                        <img
-                            src="{{ project.preview_url }}"
-                            alt="{{ project.title }} website preview"
-                            class="project-preview-image"
-                            loading="lazy"
-                            onerror="this.style.display='none'; this.parentElement.classList.add('preview-image-error');"
-                        >
-                        {% endif %}
-
-                        <div class="preview-live-overlay"></div>
-
-                        <div class="preview-decoration"></div>
-
-                        <span class="preview-number">
-                            0{{ loop.index }}
-                        </span>
-
-                        <span class="preview-label">
-                            WEB EXPERIENCE
-                        </span>
-
-                        <h4>
-                            {{ project.title }}
-                        </h4>
-
-                        <div class="preview-lines">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <a
-                            href="{{ project.live_url }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="preview-open-button"
-                            aria-label="Open {{ project.title }}"
-                        >
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-index">
-                    0{{ loop.index }}
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div class="project-info-top">
-
-                    <div>
-
-                        <span class="project-type">
-                            PROJECT 0{{ loop.index }}
-                        </span>
-
-                        <h3>
-                            {{ project.title }}
-                        </h3>
-
-                    </div>
-
-
-                    <div class="project-links">
-
-                        <a href="{{ project.live_url }}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           title="Live Preview">
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                        </a>
-
-
-                        <a href="{{ project.github_url }}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           title="GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <p>
-                    {{ project.description }}
-                </p>
-
-
-                <div class="project-tags">
-
-                    {% for tag in project.tags %}
-
-                    <span>
-                        {{ tag }}
-                    </span>
-
-                    {% endfor %}
-
-                </div>
-
-            </div>
-
-        </article>
-
-        {% endfor %}
-
-    </div>
-
+      </div>
+    </article>
+    {% endfor %}
+  </div>
 </section>
 
-
-<!-- =========================================================
-     SKILLS
-========================================================= -->
-
-<section class="section skills-section">
-
-    <div class="section-heading reveal">
-
-        <span class="section-label">
-            {{ t.skills_sub }}
-        </span>
-
-        <h2>
-            {{ t.skills_title }}
-        </h2>
-
-    </div>
-
-
-    <div class="skills-wrapper">
-
-        {% for skill in skills %}
-
-        <div class="skill-item reveal">
-
-            <span class="skill-icon">
-                <i class="fa-solid fa-code"></i>
-            </span>
-
-            <span>
-                {{ skill }}
-            </span>
-
-            <i class="fa-solid fa-arrow-up-right-from-square skill-arrow"></i>
-
-        </div>
-
-        {% endfor %}
-
-    </div>
-
+<section id="faq" class="section">
+  <div class="section-heading"><h2>{{ L.fq_t }}</h2></div>
+  <div class="faq">
+    {% for q in L.fq %}
+    <details><summary>{{ q[0] }}</summary><p>{{ q[1] }}</p></details>
+    {% endfor %}
+  </div>
 </section>
-
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
 
 <section id="contact" class="contact-section">
-
-    <div class="contact-background"></div>
-
-    <div class="contact-content reveal">
-
-        <span class="section-label">
-            {{ t.contact_sub }}
-        </span>
-
-        <h2>
-            {{ t.contact_title }}
-        </h2>
-
-        <p>
-            {{ t.contact_desc }}
-        </p>
-
-
-        <div class="contact-buttons">
-
-            <a href="tel:+37496787855"
-               class="contact-main-btn">
-
-                <span>
-                    {{ t.call_now }}
-                </span>
-
-                <i class="fa-solid fa-phone"></i>
-
-            </a>
-
-
-            <a href="mailto:mezhlumyangarik@gmail.com"
-               class="contact-outline-btn">
-
-                <span>
-                    {{ t.email_us }}
-                </span>
-
-                <i class="fa-regular fa-envelope"></i>
-
-            </a>
-
-        </div>
-
-
-        <div class="contact-details">
-
-            <a href="tel:+37496787855">
-                +374 96 78 78 55
-            </a>
-
-            <span>•</span>
-
-            <a href="mailto:mezhlumyangarik@gmail.com">
-                mezhlumyangarik@gmail.com
-            </a>
-
-        </div>
-
-
-        <div class="social-links">
-
-            <a href="https://instagram.com/mezhlumyan.webdev"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-
-            <a href="https://github.com/mezhlumyangarik-hue"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <i class="fa-brands fa-github"></i>
-
-            </a>
-
-        </div>
-
+  <div class="contact-background"></div>
+  <div class="contact-content">
+    <h2>{{ L.ct_t }}</h2>
+    <p>{{ L.ct_d }}</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/37496787855" target="_blank" rel="noopener noreferrer" class="contact-main-btn"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+      <a href="viber://chat?number=%2B37496787855" class="contact-outline-btn"><i class="fa-brands fa-viber"></i><span>Viber</span></a>
+      <a href="tel:+37496787855" class="contact-outline-btn"><i class="fa-solid fa-phone"></i><span>{{ L.call }}</span></a>
+      <a href="mailto:mezhlumyangarik@gmail.com" class="contact-outline-btn"><i class="fa-regular fa-envelope"></i><span>{{ L.mail }}</span></a>
     </div>
-
+    <div class="contact-details"><a href="tel:+37496787855">+374 96 78 78 55</a><span>•</span><a href="mailto:mezhlumyangarik@gmail.com">mezhlumyangarik@gmail.com</a></div>
+    <div class="social-links">
+      <a href="https://instagram.com/mezhlumyan.webdev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/mezhlumyangarik-hue" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
 </section>
 
 </main>
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
 <footer>
-
-    <div class="footer-inner">
-
-        <div class="footer-logo">
-
-            <span>&lt;/&gt;</span>
-
-            mezhlumyan.dev
-
-        </div>
-
-        <p>
-            © 2026 mezhlumyan.dev.
-            {{ t.footer_rights }}
-        </p>
-
-        <a href="#home" class="back-top">
-
-            <i class="fa-solid fa-arrow-up"></i>
-
-        </a>
-
-    </div>
-
+  <div class="footer-inner">
+    <div class="footer-logo"><span>&lt;/&gt;</span> mezhlumyan.dev</div>
+    <p>© 2026 mezhlumyan.dev. {{ t.footer_rights }}</p>
+    <a href="#home" class="back-top" aria-label="Top"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
 </footer>
 
-
-<!-- =========================================================
-     FLOATING CALL
-========================================================= -->
-
-<a href="tel:+37496787855"
-   class="floating-call-btn"
-   aria-label="Call">
-
-    <span class="call-pulse"></span>
-
-    <i class="fa-solid fa-phone"></i>
-
-</a>
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
+<a href="tel:+37496787855" class="floating-call-btn" aria-label="Call"><span class="call-pulse"></span><i class="fa-solid fa-phone"></i></a>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
 </body>
 </html>
