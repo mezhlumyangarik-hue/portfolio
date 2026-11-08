@@ -1,289 +1,92 @@
-{% set D = {
- 'hy': {
-  'title': 'Գարիկ Մեժլումյան | Կայքերի պատրաստում Սյունիքում',
-  'desc': 'Արագ և հեռախոսի համար հարմար կայքեր հյուրատների, ռեստորանների և խանութների համար՝ հայերեն, ռուսերեն և անգլերեն։',
-  'nav': ['Ծառայություններ', 'Ինչպես եմ աշխատում', 'Նախագծեր', 'Հարցեր', 'Կապ'],
-  'cta': 'Գրել ինձ',
-  'tk': ['Հյուրատներ','Ռեստորաններ','Խանութներ','3 լեզու','Արագ կայքեր','SEO'],
-  'wy_t': 'Ինչ կստանաք',
-  'wy': [['fa-bolt','Արագ կայք','Էջը արագ է բացվում՝ նաև հեռախոսի վրա'],['fa-mobile-screen','Հեռախոսի համար','Հարմար է ցանկացած էկրանի վրա'],['fa-language','3 լեզու','Հայերեն, ռուսերեն, անգլերեն'],['fa-magnifying-glass','Google-ում','Վերնագրեր և նկարագրություններ որոնման համար']],
-  'badge': 'Ընդունում եմ նոր պատվերներ',
-  'h1a': 'Կայք, որը բերում է', 'h1b': 'հաճախորդներ ձեր բիզնեսին',
-  'lead': 'Պատրաստում եմ արագ և հեռախոսի համար հարմար կայքեր հյուրատների, ռեստորանների և խանութների համար՝ հայերեն, ռուսերեն և անգլերեն։',
-  'b1': 'Տեսնել նախագծերը', 'b2': 'Գրել WhatsApp-ով',
-  'chips': ['3 լեզու', 'Հարմար է հեռախոսի համար', 'Google-ում գտնվելու հիմքեր'],
-  'sv_t': 'Ինչ եմ պատրաստում', 'sv_from': 'Սկսած', 'price': 'XX XXX ֏',
-  'sv': [
-   ['fa-hotel', 'Հյուրատների և ռեստորանների կայք', 'Սենյակներ կամ մենյու, լուսանկարներ և հարմար կապ, որ հյուրն ուղիղ գրի ձեզ։'],
-   ['fa-cart-shopping', 'Օնլայն խանութ', 'Ապրանքների կատալոգ, զամբյուղ և պատվերների ընդունում։'],
-   ['fa-laptop-code', 'Բիզնես վիզիտկա', 'Մեկ էջանոց կայք՝ ծառայություններ, նկարներ, կոնտակտներ և քարտեզ։']],
-  'st_t': 'Ինչպես եմ աշխատում',
-  'st': [
-   ['Զրույց', 'Պարզում ենք, ինչ է պետք ձեր բիզնեսին և ինչ ենք դնելու կայքում։'],
-   ['Դեմո', 'Ցույց եմ տալիս կայքի նախնական տարբերակը, և դուք ասում եք՝ ինչ փոխել։'],
-   ['Գործարկում', 'Կայքը դնում ենք համացանցում։ Փոփոխությունների համար մնում եմ կապի մեջ։']],
-  'pj_t': 'Իմ նախագծերը', 'live': 'Բացել կայքը',
-  'fq_t': 'Հաճախակի հարցեր',
-  'fq': [
-   ['Որքա՞ն արժե կայքը', 'Գինը կախված է էջերի քանակից և գործառույթներից։ Գրեք, ասեք ինչ եք ուզում, և ես կասեմ ճշգրիտ գինը։'],
-   ['Որքա՞ն ժամանակ է տևում', 'Ժամկետը պայմանավորվում ենք սկզբում՝ կախված ծավալից։'],
-   ['Կարո՞ղ եմ հետո փոխել տեքստերը կամ գները', 'Այո։ Փոփոխությունները կարող եմ անել ես, կամ պայմանավորվենք ամսական սպասարկման մասին։'],
-   ['Կայքը կլինի՞ երեք լեզվով', 'Այո, հայերեն, ռուսերեն և անգլերեն։ Կարող ենք սկսել մեկ լեզվով և ավելացնել մյուսները։']],
-  'ct_t': 'Քննարկենք ձեր կայքը', 'ct_d': 'Գրեք կամ զանգահարեք։ Կպատասխանեմ նույն օրը։',
-  'call': 'Զանգահարել', 'mail': 'Էլ. փոստ'},
- 'ru': {
-  'title': 'Гарик Межлумян | Создание сайтов в Сюнике',
-  'desc': 'Быстрые сайты для гостевых домов, ресторанов и магазинов на армянском, русском и английском языках.',
-  'nav': ['Услуги', 'Как я работаю', 'Проекты', 'Вопросы', 'Контакты'],
-  'cta': 'Написать мне',
-  'tk': ['Гостевые дома','Рестораны','Магазины','3 языка','Быстрые сайты','SEO'],
-  'wy_t': 'Что вы получите',
-  'wy': [['fa-bolt','Быстрый сайт','Страница быстро открывается, в том числе на телефоне'],['fa-mobile-screen','Для телефона','Удобно на любом экране'],['fa-language','3 языка','Армянский, русский, английский'],['fa-magnifying-glass','В Google','Заголовки и описания для поиска']],
-  'badge': 'Принимаю новые заказы',
-  'h1a': 'Сайт, который приводит', 'h1b': 'клиентов вашему бизнесу',
-  'lead': 'Делаю быстрые сайты, удобные на телефоне, для гостевых домов, ресторанов и магазинов на армянском, русском и английском.',
-  'b1': 'Смотреть проекты', 'b2': 'Написать в WhatsApp',
-  'chips': ['3 языка', 'Удобно на телефоне', 'Основы SEO для Google'],
-  'sv_t': 'Что я делаю', 'sv_from': 'От', 'price': 'XX XXX ֏',
-  'sv': [
-   ['fa-hotel', 'Сайт для гостевого дома или ресторана', 'Номера или меню, фото и удобная связь, чтобы гость писал вам напрямую.'],
-   ['fa-cart-shopping', 'Интернет-магазин', 'Каталог товаров, корзина и приём заказов.'],
-   ['fa-laptop-code', 'Сайт-визитка', 'Одна страница: услуги, фото, контакты и карта.']],
-  'st_t': 'Как я работаю',
-  'st': [
-   ['Разговор', 'Выясняем, что нужно вашему бизнесу и что разместить на сайте.'],
-   ['Демо', 'Показываю первую версию сайта, вы говорите, что изменить.'],
-   ['Запуск', 'Публикуем сайт. После этого остаюсь на связи по правкам.']],
-  'pj_t': 'Мои проекты', 'live': 'Открыть сайт',
-  'fq_t': 'Частые вопросы',
-  'fq': [
-   ['Сколько стоит сайт?', 'Цена зависит от количества страниц и функций. Напишите, что нужно, и я назову точную цену.'],
-   ['Сколько времени занимает работа?', 'Срок обсуждаем в начале, он зависит от объёма.'],
-   ['Можно ли потом менять тексты и цены?', 'Да. Правки могу вносить я, или договоримся о ежемесячном обслуживании.'],
-   ['Сайт будет на трёх языках?', 'Да: армянский, русский и английский. Можно начать с одного и добавить остальные.']],
-  'ct_t': 'Обсудим ваш сайт', 'ct_d': 'Напишите или позвоните. Отвечу в тот же день.',
-  'call': 'Позвонить', 'mail': 'Эл. почта'},
- 'en': {
-  'title': 'Garik Mezhlumyan | Websites for Syunik businesses',
-  'desc': 'Fast, mobile-friendly websites for guesthouses, restaurants and shops in Armenian, Russian and English.',
-  'nav': ['Services', 'How I work', 'Projects', 'FAQ', 'Contact'],
-  'cta': 'Message me',
-  'tk': ['Guesthouses','Restaurants','Shops','3 languages','Fast sites','SEO'],
-  'wy_t': 'What you get',
-  'wy': [['fa-bolt','Fast site','Pages open quickly, including on phones'],['fa-mobile-screen','Built for phones','Comfortable on any screen'],['fa-language','3 languages','Armenian, Russian, English'],['fa-magnifying-glass','Found on Google','Titles and descriptions for search']],
-  'badge': 'Taking new projects',
-  'h1a': 'A website that brings', 'h1b': 'customers to your business',
-  'lead': 'I build fast, mobile-friendly websites for guesthouses, restaurants and shops in Armenian, Russian and English.',
-  'b1': 'See projects', 'b2': 'Message on WhatsApp',
-  'chips': ['3 languages', 'Works well on phones', 'SEO basics for Google'],
-  'sv_t': 'What I build', 'sv_from': 'From', 'price': 'XX XXX ֏',
-  'sv': [
-   ['fa-hotel', 'Guesthouse or restaurant website', 'Rooms or menu, photos and easy contact so guests can reach you directly.'],
-   ['fa-cart-shopping', 'Online shop', 'Product catalog, cart and order handling.'],
-   ['fa-laptop-code', 'Business card site', 'One page with services, photos, contacts and a map.']],
-  'st_t': 'How I work',
-  'st': [
-   ['Talk', 'We work out what your business needs and what goes on the site.'],
-   ['Demo', 'I show you a first version and you tell me what to change.'],
-   ['Launch', 'We put the site online. I stay available for changes afterwards.']],
-  'pj_t': 'My projects', 'live': 'Open site',
-  'fq_t': 'Frequently asked questions',
-  'fq': [
-   ['How much does a website cost?', 'It depends on the number of pages and features. Tell me what you need and I will give you an exact price.'],
-   ['How long does it take?', 'We agree on the timeline at the start, based on the size of the project.'],
-   ['Can I change texts or prices later?', 'Yes. I can make changes for you, or we can agree on monthly maintenance.'],
-   ['Will the site be in three languages?', 'Yes: Armenian, Russian and English. We can start with one and add the others.']],
-  'ct_t': 'Let’s talk about your website', 'ct_d': 'Write or call. I reply the same day.',
-  'call': 'Call', 'mail': 'Email'}
-} %}
-{% set L = D.get(current_lang) or D['hy'] %}
-<!DOCTYPE html>
-<html lang="{{ current_lang }}">
+<!doctype html>
+<html lang="{{ lang }}">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ L.title }}</title>
-<meta name="description" content="{{ L.desc }}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ L.title }}">
-<meta property="og:description" content="{{ L.desc }}">
-<meta name="theme-color" content="#050811">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='230' fill='%23060910' stroke='%236366f1' stroke-width='24'/%3E%3Cpath d='M190 320 126 256 190 192M322 192 386 256 322 320M280 150 232 362' fill='none' stroke='%2338bdf8' stroke-width='36' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ c.title }}</title><meta name="description" content="{{ c.description }}">
+  <meta name="theme-color" content="#10110f"><meta property="og:title" content="{{ c.title }}"><meta property="og:description" content="{{ c.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<div class="progress" id="progress" aria-hidden="true"></div>
-<div class="background-orb orb-1"></div><div class="background-orb orb-2"></div><div class="background-orb orb-3"></div><div class="grid-background"></div>
-<div class="cursor-dot"></div><div class="cursor-ring"></div>
-
-<header class="site-header" id="siteHeader">
-<nav class="navbar">
-  <a href="?lang={{ current_lang }}" class="logo"><span class="logo-symbol">&lt;/&gt;</span><span>mezhlumyan<span class="logo-dot">.</span>dev</span></a>
-  <div class="nav-links" id="navLinks">
-    <a href="#services" class="nav-link">{{ L.nav[0] }}</a>
-    <a href="#process" class="nav-link">{{ L.nav[1] }}</a>
-    <a href="#projects" class="nav-link">{{ L.nav[2] }}</a>
-    <a href="#faq" class="nav-link">{{ L.nav[3] }}</a>
-    <a href="#contact" class="nav-link">{{ L.nav[4] }}</a>
+<div class="noise"></div><div class="progress" id="progress"></div>
+<header class="header" id="header">
+  <a class="brand" href="?lang={{ lang }}" aria-label="Mezhlumyan Web Dev"><span class="brand-mark">M<span>.</span></span><span class="brand-name">MEZHLUMYAN<span>WEB DEV</span></span></a>
+  <nav class="nav" id="nav">
+    <a href="#approach">{{ c.nav[0] }}</a><a href="#services">{{ c.nav[1] }}</a><a href="#projects">{{ c.nav[2] }}</a><a href="#contact">{{ c.nav[3] }}</a>
+  </nav>
+  <div class="header-right">
+    <div class="languages"><a class="{{'active' if lang=='hy' else ''}}" href="?lang=hy">HY</a><a class="{{'active' if lang=='ru' else ''}}" href="?lang=ru">RU</a><a class="{{'active' if lang=='en' else ''}}" href="?lang=en">EN</a></div>
+    <a class="header-cta magnetic" href="#contact"><span>{{ c.cta_contact }}</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span></button>
   </div>
-  <div class="nav-actions">
-    <div class="lang-switch">
-      <a href="?lang=hy" class="{% if current_lang == 'hy' %}active{% endif %}">AM</a>
-      <a href="?lang=ru" class="{% if current_lang == 'ru' %}active{% endif %}">RU</a>
-      <a href="?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">EN</a>
-    </div>
-    <a href="#contact" class="header-cta">{{ L.cta }}</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
 </header>
 
 <main>
-
-<section class="hero" id="home">
-  <div class="hero-container">
-    <div class="hero-content">
-      <div class="availability"><span class="availability-dot"></span><span>{{ L.badge }}</span></div>
-      <h1><span class="hero-line">{{ L.h1a }}</span><span class="hero-gradient">{{ L.h1b }}</span></h1>
-      <p class="hero-description">{{ L.lead }}</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="main-btn"><span>{{ L.b1 }}</span></a>
-        <a href="https://wa.me/37496787855" target="_blank" rel="noopener noreferrer" class="outline-btn"><i class="fa-brands fa-whatsapp"></i><span>{{ L.b2 }}</span></a>
-      </div>
-      <div class="chips">{% for c in L.chips %}<span>{{ c }}</span>{% endfor %}</div>
+<section class="hero" id="top">
+  <div class="hero-grid"></div><div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow reveal"><span class="eyebrow-dot"></span>{{ c.eyebrow }}</div>
+      <h1><span class="line-mask"><span class="line-inner">{{ c.headline_a }}</span></span><span class="line-mask accent-line"><span class="line-inner">{{ c.headline_b }}</span></span></h1>
+      <p class="hero-lead reveal">{{ c.lead }}</p>
+      <div class="hero-actions reveal"><a class="button button-light magnetic" href="#projects">{{ c.cta_work }} <i class="fa-solid fa-arrow-down"></i></a><a class="text-link" href="#contact">{{ c.cta_contact }} <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+      <div class="hero-meta reveal"><span>BASED IN ARMENIA</span><span class="meta-line"></span><span>AVAILABLE FOR SELECT PROJECTS</span></div>
     </div>
-    <div class="hero-visual">
-      <div class="visual-glow"></div>
-      <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
-      <div class="laptop"><div class="laptop-screen">
-        <div class="screen-top"><div class="window-dots"><span></span><span></span><span></span></div><div class="screen-url">mezhlumyan.dev</div></div>
-        <div class="code-area"><div class="code-sidebar"><div></div><div></div><div></div><div></div><div></div></div>
-          <div class="code-content">
-            <span class="code-comment">&lt;!-- hotel --&gt;</span>
-            <span><b>&lt;section</b> class="hero"<b>&gt;</b></span>
-            <span class="indent"><b>&lt;h1&gt;</b> Hotel <b>&lt;/h1&gt;</b></span>
-            <span class="indent"><b>&lt;a</b> href="wa.me"<b>&gt;</b></span>
-            <span><b>&lt;/section&gt;</b></span>
-            <div class="code-line"></div><div class="code-line short"></div><div class="code-line medium"></div>
-          </div></div>
-        <div class="preview-window"><div class="preview-title">{{ L.h1b }}</div><div class="preview-text">{{ L.chips[0] }}. {{ L.chips[1] }}.</div><div class="mock-btn">{{ L.cta }}</div></div>
-      </div>
-      <div class="laptop-base"><div class="laptop-keyboard"></div></div></div>
-      <div class="tech-card tech-html"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-      <div class="tech-card tech-css"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-      <div class="tech-card tech-js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-      <div class="tech-card tech-python"><i class="fa-brands fa-python"></i><span>Python</span></div>
-      <div class="floating-code">&lt;/&gt;</div><div class="floating-bracket">{ }</div>
+    <div class="hero-art" id="heroArt" aria-label="Abstract interactive design composition">
+      <div class="art-halo"></div><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+      <div class="art-core" id="artCore"><div class="core-top"><span>MWD®</span><span>2026 / DIGITAL</span></div><div class="core-symbol">&lt;<b>/</b>&gt;</div><div class="core-bottom"><span>DESIGN</span><span>DEVELOP</span><span>DEPLOY</span></div></div>
+      <div class="float-chip chip-one" data-float><i class="fa-brands fa-python"></i><span>PYTHON</span></div>
+      <div class="float-chip chip-two" data-float><i class="fa-brands fa-js"></i><span>JAVASCRIPT</span></div>
+      <div class="float-chip chip-three" data-float><i class="fa-solid fa-cube"></i><span>INTERACTION</span></div>
+      <div class="art-caption">INDEPENDENT BY DESIGN <span>✳</span></div>
     </div>
   </div>
+  <a href="#approach" class="scroll-cue"><span>{{ c.scroll }}</span><i class="fa-solid fa-arrow-down"></i></a>
+  <div class="hero-index">01 <span>/</span> 04</div>
 </section>
 
-<section class="ticker"><div class="ticker-track">{% for i in range(2) %}{% for w in L.tk %}<span>{{ w }}</span><i>✦</i>{% endfor %}{% endfor %}</div></section>
-
-<section class="section">
-  <div class="section-heading reveal"><h2>{{ L.wy_t }}</h2></div>
-  <div class="about-cards why">{% for w in L.wy %}<div class="mini-card reveal"><i class="fa-solid {{ w[0] }}"></i><div><strong>{{ w[1] }}</strong><span>{{ w[2] }}</span></div></div>{% endfor %}</div>
+<section class="intro section" id="approach">
+  <div class="section-kicker reveal"><span>01</span> {{ c.intro_label }}</div>
+  <div class="intro-layout"><h2 class="reveal">{{ c.intro_title }}</h2><div class="intro-aside reveal"><p>{{ c.intro_text }}</p><div class="stat-list">{% for s in c.stats %}<div class="stat"><b>{{ s[0] }}</b><span>{{ s[1] }}</span></div>{% endfor %}</div></div></div>
 </section>
 
+<section class="services section" id="services">
+  <div class="section-top"><div><div class="section-kicker reveal"><span>02</span> {{ c.services_label }}</div><h2 class="section-title reveal">{{ c.services_title }}</h2></div><div class="section-note reveal">THOUGHTFUL DIGITAL<br>CRAFT — 2026</div></div>
+  <div class="service-list">{% for s in c.services %}<article class="service-row reveal"><div class="service-number">{{ s[0] }}</div><div class="service-icon"><i class="fa-solid {{ s[1] }}"></i></div><h3>{{ s[2] }}</h3><p>{{ s[3] }}</p><span class="service-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></article>{% endfor %}</div>
+</section>
 
-<section id="services" class="section services-section">
-  <div class="section-heading reveal"><h2>{{ L.sv_t }}</h2></div>
-  <div class="services-grid">
-    {% for s in L.sv %}
-    <article class="service-card reveal">
-      <div class="service-icon"><i class="fa-solid {{ s[0] }}"></i></div>
-      <h3>{{ s[1] }}</h3>
-      <p>{{ s[2] }}</p>
-      <p class="price">{{ L.sv_from }} <strong>{{ L.price }}</strong></p>
-    </article>
-    {% endfor %}
+<section class="projects section" id="projects">
+  <div class="section-top"><div><div class="section-kicker reveal"><span>03</span> {{ c.projects_label }}</div><h2 class="section-title reveal">{{ c.projects_title }}</h2></div><div class="project-count reveal">0{{ projects|length }} <span>SELECTED WORKS</span></div></div>
+  <div class="project-grid">
+  {% for p in projects %}
+    <a class="project-card project-{{ p.tone }} reveal" href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+      <div class="project-visual"><div class="visual-noise"></div><div class="visual-frame"><div class="frame-bar"><span></span><span></span><span></span><small>{{ p.title|lower|replace(' ','') }}.com</small></div><div class="frame-art"><div class="frame-orb"></div><div class="frame-word">{{ p.title.split()[0] }}<br><i>{{ p.title.split()[-1] if p.title.split()|length > 1 else 'STUDIO' }}</i></div><div class="frame-lines"><span></span><span></span><span></span></div></div></div><span class="project-index">{{ p.number }}</span><span class="project-open"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+      <div class="project-info"><div><h3>{{ p.title }}</h3><p>{{ p.desc[lang] }}</p></div><span>{{ p.type }}</span></div>
+    </a>
+  {% endfor %}
   </div>
 </section>
 
-<section id="process" class="section">
-  <div class="section-heading reveal"><h2>{{ L.st_t }}</h2></div>
-  <ol class="steps">
-    {% for s in L.st %}
-    <li class="step reveal"><span class="step-n">{{ loop.index }}</span><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></li>
-    {% endfor %}
-  </ol>
+<section class="process section" id="process">
+  <div class="section-top"><div><div class="section-kicker reveal"><span>04</span> {{ c.process_label }}</div><h2 class="section-title reveal">{{ c.process_title }}</h2></div></div>
+  <div class="process-grid">{% for p in c.process %}<article class="process-item reveal"><span>0{{ loop.index }}</span><div><h3>{{ p[0] }}</h3><p>{{ p[1] }}</p></div><i class="fa-solid fa-arrow-up-right-from-square"></i></article>{% endfor %}</div>
 </section>
 
-<section id="projects" class="section projects-section">
-  <div class="section-heading reveal"><h2>{{ L.pj_t }}</h2></div>
-  <div class="pj-grid">
-    {% for p in projects %}
-    <article class="pj reveal">
-      <a class="pj-img" href="{{ p.live_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.title }}">
-        {% if p.preview_url %}<img src="{{ p.preview_url }}" alt="{{ p.title }}" loading="lazy" width="640" height="400" onerror="this.remove()">{% endif %}
-      </a>
-      <div class="pj-body">
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
-        <div class="project-tags">{% for tag in p.tags %}<span>{{ tag }}</span>{% endfor %}</div>
-        <div class="pj-links">
-          <a href="{{ p.live_url }}" target="_blank" rel="noopener noreferrer">{{ L.live }}</a>
-          <a href="{{ p.github_url }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-      </div>
-    </article>
-    {% endfor %}
+<section class="stack section">
+  <div class="stack-copy"><div class="section-kicker reveal"><span>05</span> {{ c.stack_label }}</div><h2 class="section-title reveal">{{ c.stack_title }}</h2></div>
+  <div class="stack-cloud reveal"><span>PYTHON</span><span>FLASK</span><span>DJANGO</span><span>HTML5</span><span>CSS3</span><span>JAVASCRIPT</span><span>GSAP</span><span>THREE.JS</span><span>GIT</span></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-orb"></div><div class="contact-inner">
+    <div class="section-kicker reveal"><span>06</span> {{ c.contact_label }}</div><h2 class="reveal">{{ c.contact_title }}</h2><p class="reveal">{{ c.contact_text }}</p>
+    <div class="contact-actions reveal"><a class="button button-light magnetic" href="https://wa.me/37496787855" target="_blank" rel="noopener noreferrer">{{ c.contact_btn }} <i class="fa-brands fa-whatsapp"></i></a><a class="button button-outline magnetic" href="mailto:mezhlumyangarik@gmail.com">{{ c.email }} <i class="fa-regular fa-envelope"></i></a></div>
+    <div class="contact-bottom"><a href="tel:+37496787855">+374 96 78 78 55</a><a href="https://instagram.com/mezhlumyan.webdev" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a href="https://github.com/mezhlumyangarik-hue" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
   </div>
 </section>
-
-<section id="faq" class="section">
-  <div class="section-heading reveal"><h2>{{ L.fq_t }}</h2></div>
-  <div class="faq">
-    {% for q in L.fq %}
-    <details class="reveal"><summary>{{ q[0] }}</summary><p>{{ q[1] }}</p></details>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="contact" class="contact-section">
-  <div class="contact-background"></div>
-  <div class="contact-content reveal">
-    <h2>{{ L.ct_t }}</h2>
-    <p>{{ L.ct_d }}</p>
-    <div class="contact-buttons">
-      <a href="https://wa.me/37496787855" target="_blank" rel="noopener noreferrer" class="contact-main-btn"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
-      <a href="viber://chat?number=%2B37496787855" class="contact-outline-btn"><i class="fa-brands fa-viber"></i><span>Viber</span></a>
-      <a href="tel:+37496787855" class="contact-outline-btn"><i class="fa-solid fa-phone"></i><span>{{ L.call }}</span></a>
-      <a href="mailto:mezhlumyangarik@gmail.com" class="contact-outline-btn"><i class="fa-regular fa-envelope"></i><span>{{ L.mail }}</span></a>
-    </div>
-    <div class="contact-details"><a href="tel:+37496787855">+374 96 78 78 55</a><span>•</span><a href="mailto:mezhlumyangarik@gmail.com">mezhlumyangarik@gmail.com</a></div>
-    <div class="social-links">
-      <a href="https://instagram.com/mezhlumyan.webdev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://github.com/mezhlumyangarik-hue" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    </div>
-  </div>
-</section>
-
 </main>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo"><span>&lt;/&gt;</span> mezhlumyan.dev</div>
-    <p>© 2026 mezhlumyan.dev. {{ t.footer_rights }}</p>
-    <a href="#home" class="back-top" aria-label="Top"><i class="fa-solid fa-arrow-up"></i></a>
-  </div>
-</footer>
-
-<nav class="dots" aria-label="Sections">
-  <a href="#home" data-label="Home" aria-label="Home"></a>
-  <a href="#services" data-label="{{ L.nav[0] }}" aria-label="{{ L.nav[0] }}"></a>
-  <a href="#process" data-label="{{ L.nav[1] }}" aria-label="{{ L.nav[1] }}"></a>
-  <a href="#projects" data-label="{{ L.nav[2] }}" aria-label="{{ L.nav[2] }}"></a>
-  <a href="#faq" data-label="{{ L.nav[3] }}" aria-label="{{ L.nav[3] }}"></a>
-  <a href="#contact" data-label="{{ L.nav[4] }}" aria-label="{{ L.nav[4] }}"></a>
-</nav>
-
-<a href="tel:+37496787855" class="floating-call-btn" aria-label="Call"><span class="call-pulse"></span><i class="fa-solid fa-phone"></i></a>
-
+<footer><a class="brand" href="#top"><span class="brand-mark">M<span>.</span></span><span class="brand-name">MEZHLUMYAN<span>WEB DEV</span></span></a><p>© 2026 MEZHLUMYAN WEB DEV. {{ c.footer }}</p><a class="back-top" href="#top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a></footer>
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html>
+</body></html>
