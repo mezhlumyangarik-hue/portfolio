@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -11,14 +12,13 @@
   <meta property="og:title" content="{{ c.title }}">
   <meta property="og:description" content="{{ c.description }}">
 
-  <!-- FAVICON (Globe Logo) -->
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
-  <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -50,7 +50,7 @@
 <header class="header" id="header">
 
   <a href="?lang={{ lang }}" class="brand">
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="Mezhlumyan Logo" class="brand-logo-img">
+    <span class="brand-mark">M<span>.</span></span>
 
     <span class="brand-name">
       MEZHLUMYAN
@@ -66,6 +66,7 @@
   </nav>
 
   <div class="header-right">
+
     <div class="languages">
       <a class="{{ 'active' if lang=='hy' else '' }}" href="?lang=hy">HY</a>
       <a class="{{ 'active' if lang=='ru' else '' }}" href="?lang=ru">RU</a>
@@ -79,23 +80,29 @@
       <i class="fa-solid fa-arrow-up-right-from-square"></i>
     </button>
 
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-label="Toggle navigation">
       <span></span>
       <span></span>
     </button>
+
   </div>
 </header>
 
 
 <main>
 
-<!-- HERO SECTION -->
+<!-- ================= HERO ================= -->
+
 <section class="hero section" id="top">
+
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
 
   <div class="hero-inner">
+
     <div class="hero-copy">
+
       <div class="eyebrow reveal">
         <span class="eyebrow-dot"></span>
         {{ c.eyebrow }}
@@ -105,6 +112,7 @@
         <span class="line-mask">
           <span class="line-inner">{{ c.headline_a }}</span>
         </span>
+
         <span class="line-mask accent-line">
           <span class="line-inner">{{ c.headline_b }}</span>
         </span>
@@ -115,339 +123,565 @@
       </p>
 
       <div class="hero-actions reveal">
+
         <button class="button button-primary magnetic open-modal-btn"
                 type="button"
                 data-service="Նոր կայք">
+
           {{ c.cta_contact }}
           <i class="fa-solid fa-rocket"></i>
+
         </button>
 
         <a href="#projects" class="button button-glass">
           {{ c.cta_work }}
           <i class="fa-solid fa-arrow-down"></i>
         </a>
+
       </div>
 
       <div class="hero-stats-row reveal">
+
         <div class="h-stat">
           <b>50+</b>
           <span>PROJECTS</span>
         </div>
+
         <div class="h-stat">
           <b>6+</b>
           <span>EXPERIENCE</span>
         </div>
+
         <div class="h-stat">
           <b>12</b>
           <span>REGIONS</span>
         </div>
+
       </div>
+
     </div>
 
-    <!-- HERO VISUAL (LAPTOP CODE + PHONE PREVIEW) -->
+
+    <!-- HERO VISUAL -->
+
     <div class="hero-art reveal" id="heroArt">
+
       <div class="art-halo"></div>
+      <div class="art-orbit orbit-a"></div>
+      <div class="art-orbit orbit-b"></div>
 
-      <div class="mockup-laptop">
-        <div class="laptop-screen">
-          <div class="laptop-bar">
-            <span></span><span></span><span></span>
-            <small>mezhlumyan.webdev — app.py</small>
-          </div>
-          <div class="code-editor">
-            <pre><code id="liveCode"></code><span class="cursor">|</span></pre>
-          </div>
+      <div class="art-core" id="artCore">
+
+        <div class="core-top">
+          <span>MWD® STUDIO</span>
+          <span>2026 / PRO</span>
         </div>
-        <div class="laptop-base"></div>
-      </div>
 
-      <div class="mockup-phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-site-scroll">
-            <div class="p-site-hero">
-              <span class="p-badge">IMPERIAL GOLD</span>
-              <h4>Պրեմիում Զարդեր</h4>
-              <div class="p-btn">Գնել հիմա</div>
-            </div>
-            <div class="p-site-grid">
-              <div class="p-card"></div>
-              <div class="p-card"></div>
-              <div class="p-card"></div>
-              <div class="p-card"></div>
-            </div>
+        <div class="core-center">
+
+          <div class="core-logo-ring">
+            <i class="fa-solid fa-code"></i>
           </div>
+
+          <div class="core-symbol">
+            &lt;<b>/</b>&gt;
+          </div>
+
         </div>
+
+        <div class="core-bottom">
+          <span>DESIGN</span>
+          <span>SECURITY</span>
+          <span>SPEED</span>
+        </div>
+
       </div>
 
-      <div class="float-chip chip-one">
-        <i class="fa-solid fa-bolt"></i> 99% SPEED
+      <div class="float-chip chip-one" data-float>
+        <i class="fa-solid fa-store"></i>
+        E-COMMERCE
       </div>
-      <div class="float-chip chip-two">
-        <i class="fa-solid fa-shield-halved"></i> SSL SECURE
+
+      <div class="float-chip chip-two" data-float>
+        <i class="fa-solid fa-shield-halved"></i>
+        SECURE
       </div>
+
+      <div class="float-chip chip-three" data-float>
+        <i class="fa-solid fa-bolt"></i>
+        FAST PERFORMANCE
+      </div>
+
     </div>
+
   </div>
 
   <a href="#approach" class="scroll-cue">
     <span>{{ c.scroll }}</span>
     <i class="fa-solid fa-arrow-down"></i>
   </a>
+
 </section>
 
-<!-- PROMO STRIP -->
+
+<!-- ================= PROMO STRIP ================= -->
+
 <section class="promo-strip section">
+
   <div class="promo-strip-inner glass">
+
     <div class="promo-icon">
       <i class="fa-solid fa-fire-flame-curved"></i>
     </div>
+
     <div class="promo-content">
       <strong>{{ c.promo_badge }}</strong>
       <p>{{ c.promo_title }}</p>
     </div>
+
     <button class="button button-primary open-modal-btn"
             type="button"
             data-service="Անվճար խորհրդատվություն">
+
       {{ c.promo_btn }}
       <i class="fa-brands fa-whatsapp"></i>
+
     </button>
+
   </div>
+
 </section>
 
-<!-- APPROACH -->
+
+<!-- ================= APPROACH ================= -->
+
 <section class="intro section" id="approach">
+
   <div class="section-kicker reveal">
     <span>01</span>
     {{ c.intro_label }}
   </div>
 
   <div class="intro-layout">
+
     <h2 class="reveal">
       {{ c.intro_title }}
     </h2>
+
     <div class="intro-aside reveal">
+
       <p>{{ c.intro_text }}</p>
+
       <div class="stat-list">
+
         {% for s in c.stats %}
+
         <div class="stat glass">
           <b>{{ s[0] }}</b>
           <span>{{ s[1] }}</span>
         </div>
+
         {% endfor %}
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- SERVICES -->
+
+<!-- ================= SERVICES ================= -->
+
 <section class="services section" id="services">
+
   <div class="section-top">
+
     <div>
       <div class="section-kicker reveal">
         <span>02</span>
         {{ c.services_label }}
       </div>
+
       <h2 class="section-title reveal">
         {{ c.services_title }}
       </h2>
     </div>
+
     <div class="section-note reveal">
       HIGH CONVERSION<br>
       DIGITAL SOLUTIONS
     </div>
+
   </div>
 
+
   <div class="service-banners">
+
     {% for s in c.services %}
+
     <article class="service-banner-card glass reveal">
+
       <div class="sb-glow"></div>
+
       <div class="sb-top">
         <span class="sb-num">{{ s[0] }}</span>
         <span class="sb-tag">{{ s[4] }}</span>
       </div>
+
       <div class="sb-icon-box">
         <i class="fa-solid {{ s[1] }}"></i>
       </div>
+
       <h3>{{ s[2] }}</h3>
+
       <p>{{ s[3] }}</p>
+
       <button class="sb-btn open-modal-btn"
               type="button"
               data-service="{{ s[2] }}">
+
         <span>{{ c.cta_contact }}</span>
         <i class="fa-solid fa-arrow-right"></i>
+
       </button>
+
     </article>
+
     {% endfor %}
+
   </div>
+
 </section>
 
-<!-- PROJECTS -->
+
+<!-- ================= PROJECTS ================= -->
+
 <section class="projects section" id="projects">
+
   <div class="section-top">
+
     <div>
+
       <div class="section-kicker reveal">
         <span>03</span>
         {{ c.projects_label }}
       </div>
+
       <h2 class="section-title reveal">
         {{ c.projects_title }}
       </h2>
+
     </div>
+
     <div class="project-count reveal">
       {{ '%02d'|format(projects|length) }}
       <span>SELECTED WORKS</span>
     </div>
+
   </div>
 
+
   <div class="project-grid">
+
     {% for p in projects %}
+
     <article class="project-card project-{{ p.tone }} glass reveal">
+
       <div class="project-visual">
+
         <div class="visual-noise"></div>
+
         <div class="visual-frame">
+
           <div class="frame-bar">
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
             <small>
               <i class="fa-solid fa-lock"></i>
               {{ p.title|lower|replace(' ','') }}.am
             </small>
           </div>
+
           <div class="frame-art">
+
             <div class="frame-orb"></div>
+
             <div class="theme-logo-badge">
               <i class="fa-solid {{ p.icon }}"></i>
               <span>{{ p.badge }}</span>
             </div>
+
             <div class="frame-word">
               {{ p.title.split()[0] }}<br>
-              <i>{{ p.title.split()[-1] if p.title.split()|length > 1 else 'PRO' }}</i>
+              <i>
+                {{ p.title.split()[-1] if p.title.split()|length > 1 else 'PRO' }}
+              </i>
             </div>
+
             <div class="frame-lines">
-              <span></span><span></span><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
+
           </div>
+
         </div>
+
         <span class="project-index">{{ p.number }}</span>
+
+        <button class="project-open open-modal-btn"
+                type="button"
+                data-service="Նմանատիպ կայք՝ {{ p.title }}"
+                aria-label="Order similar project">
+
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </button>
+
       </div>
 
+
       <div class="project-info">
+
         <div>
           <h3>{{ p.title }}</h3>
           <p>{{ p.desc[lang] }}</p>
         </div>
 
-        <div class="project-footer-actions">
-          <span class="project-type-tag">{{ p.type }}</span>
-          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" class="visit-site-btn">
-            <span>{{ 'Այցելել կայք' if lang=='hy' else ('Открыть сайт' if lang=='ru' else 'Visit Site') }}</span>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
+        <span>{{ p.type }}</span>
+
       </div>
+
     </article>
+
     {% endfor %}
+
   </div>
+
 </section>
 
-<!-- PROCESS -->
+
+<!-- ================= PROCESS ================= -->
+
 <section class="process section" id="process">
+
   <div class="section-top">
+
     <div>
+
       <div class="section-kicker reveal">
         <span>04</span>
         {{ c.process_label }}
       </div>
+
       <h2 class="section-title reveal">
         {{ c.process_title }}
       </h2>
+
     </div>
+
   </div>
 
+
   <div class="process-grid">
+
     {% for p in c.process %}
+
     <article class="process-item glass reveal">
+
       <span>0{{ loop.index }}</span>
+
       <div>
         <h3>{{ p[0] }}</h3>
         <p>{{ p[1] }}</p>
       </div>
+
       <i class="fa-solid fa-check-circle"></i>
+
     </article>
+
     {% endfor %}
+
   </div>
+
 </section>
 
-<!-- TECH STACK -->
+
+<!-- ================= TECH STACK ================= -->
+
 <section class="stack section" id="stack">
+
   <div class="stack-copy">
+
     <div class="section-kicker reveal">
       <span>05</span>
       {{ c.stack_label }}
     </div>
+
     <h2 class="section-title reveal">
       {{ c.stack_title }}
     </h2>
+
   </div>
+
 
   <div class="stack-cloud reveal">
-    <span class="glass"><i class="fa-brands fa-python"></i> PYTHON</span>
-    <span class="glass"><i class="fa-solid fa-server"></i> FLASK</span>
-    <span class="glass"><i class="fa-brands fa-html5"></i> HTML5</span>
-    <span class="glass"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-    <span class="glass"><i class="fa-brands fa-js"></i> JAVASCRIPT</span>
-    <span class="glass"><i class="fa-solid fa-database"></i> DATABASE</span>
-    <span class="glass"><i class="fa-brands fa-git-alt"></i> GIT</span>
-    <span class="glass"><i class="fa-solid fa-shield-halved"></i> SSL / SECURITY</span>
-    <span class="glass"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO</span>
+
+    <span class="glass">
+      <i class="fa-brands fa-python"></i>
+      PYTHON
+    </span>
+
+    <span class="glass">
+      <i class="fa-solid fa-server"></i>
+      FLASK
+    </span>
+
+    <span class="glass">
+      <i class="fa-brands fa-html5"></i>
+      HTML5
+    </span>
+
+    <span class="glass">
+      <i class="fa-brands fa-css3-alt"></i>
+      CSS3
+    </span>
+
+    <span class="glass">
+      <i class="fa-brands fa-js"></i>
+      JAVASCRIPT
+    </span>
+
+    <span class="glass">
+      <i class="fa-solid fa-database"></i>
+      DATABASE
+    </span>
+
+    <span class="glass">
+      <i class="fa-brands fa-git-alt"></i>
+      GIT
+    </span>
+
+    <span class="glass">
+      <i class="fa-solid fa-shield-halved"></i>
+      SSL / SECURITY
+    </span>
+
+    <span class="glass">
+      <i class="fa-solid fa-magnifying-glass-chart"></i>
+      SEO
+    </span>
+
   </div>
+
 </section>
 
-<!-- CONTACT -->
+
+<!-- ================= CONTACT ================= -->
+
 <section class="contact section" id="contact">
+
   <div class="contact-orb"></div>
+
   <div class="contact-inner">
+
     <div class="section-kicker reveal">
       <span>06</span>
       {{ c.contact_label }}
     </div>
-    <h2 class="reveal">{{ c.contact_title }}</h2>
-    <p class="reveal">{{ c.contact_text }}</p>
+
+    <h2 class="reveal">
+      {{ c.contact_title }}
+    </h2>
+
+    <p class="reveal">
+      {{ c.contact_text }}
+    </p>
+
 
     <div class="contact-actions reveal">
+
       <a class="button button-dark magnetic"
          href="https://wa.me/37496787855?text=Բարև%20ձեզ,%20ցանկանում%20եմ%20քննարկել%20կայքի%20պատվեր"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
+
         {{ c.contact_btn }}
         <i class="fa-brands fa-whatsapp"></i>
+
       </a>
-      <a class="button button-outline magnetic" href="tel:+37496787855">
+
+      <a class="button button-outline magnetic"
+         href="tel:+37496787855">
+
         {{ c.call_btn }}
         <i class="fa-solid fa-phone"></i>
+
       </a>
+
     </div>
 
+
     <div class="contact-bottom">
-      <a href="tel:+37496787855">+374 96 78 78 55</a>
-      <a href="https://instagram.com/mezhlumyan.webdev" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-      <a href="mailto:mezhlumyangarik@gmail.com">EMAIL ↗</a>
+
+      <a href="tel:+37496787855">
+        +374 96 78 78 55
+      </a>
+
+      <a href="https://instagram.com/mezhlumyan.webdev"
+         target="_blank"
+         rel="noopener noreferrer">
+        INSTAGRAM ↗
+      </a>
+
+      <a href="mailto:mezhlumyangarik@gmail.com">
+        EMAIL ↗
+      </a>
+
     </div>
+
   </div>
+
 </section>
 
 </main>
 
-<!-- FLOATING WHATSAPP -->
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
 <a href="https://wa.me/37496787855?text=Բարև%20ձեզ,%20կայքի%20հարցով%20եմ%20գրում"
-   class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+   class="floating-wa"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp">
+
   <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
-<!-- ORDER MODAL -->
-<div class="modal-backdrop" id="orderModal" aria-hidden="true">
+
+<!-- ================= ORDER MODAL ================= -->
+
+<div class="modal-backdrop"
+     id="orderModal"
+     aria-hidden="true">
+
   <div class="modal-box glass">
-    <button type="button" class="modal-close" id="closeModal" aria-label="Close">
+
+    <button type="button"
+            class="modal-close"
+            id="closeModal"
+            aria-label="Close">
+
       <i class="fa-solid fa-xmark"></i>
+
     </button>
+
 
     <div class="modal-badge">
       <i class="fa-solid fa-bolt"></i>
@@ -455,41 +689,79 @@
     </div>
 
     <h3>{{ c.modal_title }}</h3>
+
     <p>{{ c.modal_sub }}</p>
 
+
     <form id="quickOrderForm">
-      <input type="hidden" id="selectedService" name="service">
+
+      <input type="hidden"
+             id="selectedService"
+             name="service">
 
       <div class="form-group">
-        <label for="clientName">{{ c.modal_name }}</label>
-        <input type="text" id="clientName" name="name" placeholder="Անուն / Բիզնես" required>
+        <label for="clientName">Name</label>
+
+        <input type="text"
+               id="clientName"
+               name="name"
+               placeholder="Your name"
+               required>
       </div>
 
       <div class="form-group">
-        <label for="clientContact">{{ c.modal_phone }}</label>
-        <input type="text" id="clientContact" name="contact" placeholder="096 XX XX XX" required>
+        <label for="clientContact">Phone / Email</label>
+
+        <input type="text"
+               id="clientContact"
+               name="contact"
+               placeholder="Your contact information"
+               required>
       </div>
 
-      <button type="submit" class="button button-primary modal-submit">
-        {{ c.modal_send }}
-        <i class="fa-brands fa-whatsapp"></i>
+      <div class="form-group">
+        <label for="clientMessage">Project details</label>
+
+        <textarea id="clientMessage"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell me about your project"></textarea>
+      </div>
+
+      <button type="submit"
+              class="button button-primary modal-submit">
+
+        {{ c.cta_contact }}
+        <i class="fa-solid fa-paper-plane"></i>
+
       </button>
+
     </form>
+
   </div>
+
 </div>
 
+
 <!-- FOOTER -->
+
 <footer class="footer">
+
   <a href="#top" class="footer-brand">
     MEZHLUMYAN<span>.</span>
   </a>
-  <p>{{ c.footer }}</p>
+
+  <p>© 2026 Mezhlumyan Web Studio. All rights reserved.</p>
+
   <a href="#top" class="back-to-top">
     BACK TO TOP
     <i class="fa-solid fa-arrow-up"></i>
   </a>
+
 </footer>
 
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>
