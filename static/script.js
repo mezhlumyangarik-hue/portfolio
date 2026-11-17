@@ -41,18 +41,50 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach(el => observer.observe(el));
   }
 
+  // Live Typing Code Animation for Laptop Mockup
+  const codeElement = document.getElementById("liveCode");
+  if (codeElement) {
+    const codeSnippet = `from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def create_business_site():
+    site = {
+        "brand": "MEZHLUMYAN STUDIO",
+        "speed": "99.9% Optimized",
+        "security": "SSL + Firewall Active",
+        "status": "HIGH_CONVERSION_MODE"
+    }
+    return render_template("index.html", data=site)`;
+
+    let i = 0;
+    function typeCode() {
+      if (i < codeSnippet.length) {
+        codeElement.textContent += codeSnippet.charAt(i);
+        i++;
+        setTimeout(typeCode, 35);
+      } else {
+        setTimeout(() => {
+          codeElement.textContent = "";
+          i = 0;
+          typeCode();
+        }, 3500);
+      }
+    }
+    typeCode();
+  }
+
   // 3D Hero Card Interaction
   const art = document.getElementById("heroArt");
-  const core = document.getElementById("artCore");
-  const chips = [...document.querySelectorAll("[data-float]")];
-  if (art && core && fine && !reduce) {
+  const chips = [...document.querySelectorAll(".float-chip")];
+  if (art && fine && !reduce) {
     let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
     const animate = () => {
       currentX += (targetX - currentX) * 0.08;
       currentY += (targetY - currentY) * 0.08;
-      core.style.transform = `rotateX(${currentY * -10 - 6}deg) rotateY(${targetX * 12}deg) rotateZ(${-6 + currentX * 2}deg)`;
       chips.forEach((chip, i) => {
-        const factor = (i + 1) * 10;
+        const factor = (i + 1) * 8;
         chip.style.transform = `translate(${currentX * factor}px, ${currentY * factor}px)`;
       });
       requestAnimationFrame(animate);
@@ -69,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Quick Order Modal & Direct WhatsApp Integration
   const modal = document.getElementById("orderModal");
   const closeModal = document.getElementById("closeModal");
-  const serviceInput = document.getElementById("clientService");
+  const serviceInput = document.getElementById("selectedService");
   const orderForm = document.getElementById("quickOrderForm");
 
   document.querySelectorAll(".open-modal-btn").forEach(btn => {
@@ -91,12 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
   orderForm?.addEventListener("submit", e => {
     e.preventDefault();
     const name = document.getElementById("clientName").value.trim();
-    const phone = document.getElementById("clientPhone").value.trim();
-    const service = serviceInput.value.trim();
+    const contact = document.getElementById("clientContact").value.trim();
+    const service = serviceInput?.value.trim() || "Կայքի պատվեր";
 
-    if (!name || !phone) return;
+    if (!name || !contact) return;
 
-    const text = `Բարև Ձեզ, Mezhlumyan Web Dev!\nԱնուն / Բիզնես՝ ${name}\nՀեռախոս՝ ${phone}\nԾառայություն՝ ${service}`;
+    const text = `Բարև Ձեզ, Mezhlumyan Web Dev!\nԱնուն՝ ${name}\nԿոնտակտ՝ ${contact}\nԾառայություն/Նախագիծ՝ ${service}`;
     const waUrl = `https://wa.me/37496787855?text=${encodeURIComponent(text)}`;
     window.open(waUrl, "_blank", "noopener,noreferrer");
     hideModal();
@@ -106,7 +138,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Smooth Anchor Scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener("click", e => {
-      const target = document.querySelector(a.getAttribute("href"));
+      const href = a.getAttribute("href");
+      if (href === "#" || !href.startsWith("#")) return;
+      const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
       target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
