@@ -131,6 +131,20 @@ PROJECTS = [
 }
 
 }
+  {
+        "number": "05",
+        "title": "Tevosyan Furniture",
+        "tone": "furniture",
+        "icon": "fa-couch",
+        "badge": "CATALOG & SHOWROOM",
+        "url": "#",  # Այստեղ կդնեք կայքի իրական հղումը, երբ պատրաստ լինի
+        "type": "ԿԱՀՈՒՅՔԻ ԱՐՏԱԴՐՈՒԹՅՈՒՆ",
+        "desc": {
+            "hy": "Ժամանակակից կահույքի արտադրամասի ներկայացուցչական կայք՝ տեսականու կատալոգով և անհատական պատվերի համակարգով։",
+            "ru": "Представительский сайт мебельного производства с каталогом продукции и системой индивидуального заказа.",
+            "en": "Modern furniture manufacturing website featuring a product catalog and custom order system."
+        }
+    }
 
 ]
 
