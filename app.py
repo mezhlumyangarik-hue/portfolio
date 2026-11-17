@@ -11,11 +11,11 @@ DEFAULT_LANGUAGE = "hy"
 PROJECTS = [
     {
         "number": "01",
-        "title": "SYUNIQ GOLD & JEWELRY",
+        "title": "Imperial Gold",
         "tone": "gold",
         "icon": "fa-gem",
         "badge": "E-COMMERCE",
-        "url": "#contact",
+        "url": "https://imperial-gold-livid.vercel.app/",
         "type": "ՕՆԼԱՅՆ ԽԱՆՈՒԹ",
         "desc": {
             "hy": "Պրեմիում զարդերի օնլայն խանութ՝ հարմար կատալոգով, արագ պատվերով և ժամանակակից դիզայնով։",
@@ -25,11 +25,11 @@ PROJECTS = [
     },
     {
         "number": "02",
-        "title": "GORIS GRAND HOTEL",
+        "title": "ROYAL Ararat Hotel",
         "tone": "hotel",
         "icon": "fa-hotel",
         "badge": "BOOKING",
-        "url": "#contact",
+        "url": "https://hotel-demo-iota-tan.vercel.app/",
         "type": "ՀՅՈՒՐԱՆՈՑ ԵՎ ԱՄՐԱԳՐՈՒՄ",
         "desc": {
             "hy": "Հյուրանոցային համալիրի ներկայացուցչական կայք՝ սենյակների 3D տուրով և ուղիղ ամրագրմամբ։",
@@ -39,11 +39,11 @@ PROJECTS = [
     },
     {
         "number": "03",
-        "title": "TASTE OF TATEV",
+        "title": "ROYAL ARARAT",
         "tone": "food",
         "icon": "fa-utensils",
         "badge": "QR MENU & DELIVERY",
-        "url": "#contact",
+        "url": "https://restaurant-demo-m.vercel.app/",
         "type": "ՌԵՍՏՈՐԱՆ ԵՎ ԱՌԱՔՈՒՄ",
         "desc": {
             "hy": "Արագ թվային մենյու և առաքման համակարգ՝ տեղական ռեստորանների ու սրճարանների համար։",
@@ -53,11 +53,11 @@ PROJECTS = [
     },
     {
         "number": "04",
-        "title": "TECHZONE ARMENIA",
+        "title": "TECHPULSE ARMENIA",
         "tone": "tech",
         "icon": "fa-microchip",
         "badge": "CATALOG",
-        "url": "#contact",
+        "url": "https://techpulse-store-0.vercel.app/",
         "type": "ՏԵԽՆԻԿԱՅԻ ԽԱՆՈՒԹ",
         "desc": {
             "hy": "Էլեկտրոնիկայի խանութի հարթակ՝ ֆիլտրերով, զեղչերի համակարգով և WhatsApp պատվերով։",
