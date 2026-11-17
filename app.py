@@ -64,19 +64,19 @@ PROJECTS = [
             "ru": "Платформа магазина электроники с умными фильтрами, скидками и заказом в WhatsApp.",
             "en": "Electronics store platform with smart filtering, promos, and WhatsApp checkout."
         }
-    }
+    },
     {
         "number": "05",
         "title": "Tevosyan Furniture",
         "tone": "furniture",
         "icon": "fa-couch",
-        "badge": "CATALOG & SHOWROOM",
-        "url": "https://vercel.com/mezhlumyanwebdev/tevosyan-furniture",  # Այստեղ կդնեք կայքի իրական հղումը, երբ պատրաստ լինի
+        "badge": "SHOWROOM & CATALOG",
+        "url": "#",
         "type": "ԿԱՀՈՒՅՔԻ ԱՐՏԱԴՐՈՒԹՅՈՒՆ",
         "desc": {
-            "hy": "Ժամանակակից կահույքի արտադրամասի ներկայացուցչական կայք՝ տեսականու կատալոգով և անհատական պատվերի համակարգով։",
-            "ru": "Представительский сайт мебельного производства с каталогом продукции и системой индивидуального заказа.",
-            "en": "Modern furniture manufacturing website featuring a product catalog and custom order system."
+            "hy": "Ժամանակակից կահույքի արտադրամասի պրեմիում կայք՝ տեսականու ցուցադրությամբ և պատվերի հնարավորությամբ։",
+            "ru": "Премиум-сайт мебельного производства с демонстрацией ассортимента и возможностью заказа.",
+            "en": "Modern furniture manufacturing showcase website with catalog and custom order options."
         }
     }
 ]
@@ -132,8 +132,8 @@ COPY = {
         "modal_title": "Արագ Պատվերի Հայտ",
         "modal_sub": "Լրացրեք տվյալները, և մենք կկապվենք Ձեզ հետ 15 րոպեում։",
         "modal_name": "Ձեր անունը կամ խանութի անվանումը",
-        "modal_phone": "Հեռախոսահամար (օր.՝ 096 XX XX XX)",
-        "modal_service": "Ընտրեք ծառայությունը",
+        "modal_phone": "Հեռախոսահամար / Կոնտակտ",
+        "modal_service": "Ծառայություն",
         "modal_send": "Ուղարկել WhatsApp-ով",
         "footer": "Բոլոր իրավունքները պաշտպանված են։ Ստեղծված է Գորիսում ❤️",
     },
@@ -187,8 +187,8 @@ COPY = {
         "modal_title": "Быстрая заявка",
         "modal_sub": "Заполните данные, и мы свяжемся с вами в течение 15 минут.",
         "modal_name": "Ваше имя или название магазина",
-        "modal_phone": "Номер телефона",
-        "modal_service": "Выберите услугу",
+        "modal_phone": "Номер телефона / Контакт",
+        "modal_service": "Услуга",
         "modal_send": "Отправить в WhatsApp",
         "footer": "Все права защищены. Создано в Горисе ❤️",
     },
@@ -242,8 +242,8 @@ COPY = {
         "modal_title": "Quick Order Request",
         "modal_sub": "Fill in your details and we will reach out within 15 minutes.",
         "modal_name": "Your Name or Shop Name",
-        "modal_phone": "Phone Number",
-        "modal_service": "Select Service",
+        "modal_phone": "Phone Number / Contact",
+        "modal_service": "Service",
         "modal_send": "Send via WhatsApp",
         "footer": "All rights reserved. Crafted in Goris ❤️",
     }
